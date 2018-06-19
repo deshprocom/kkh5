@@ -28,11 +28,11 @@ const client = create({
     timeout: 20000,
 });
 
-if(process.env.NODE_ENV === 'development')
-client.addMonitor(response => {
-    const {url} = response.config;
-    console.log('响应' + url, response)
-})
+if (process.env.NODE_ENV === 'development')
+    client.addMonitor(response => {
+        const {url} = response.config;
+        console.log('响应' + url, response)
+    })
 
 client.addRequestTransform(request => {
     console.log(TAG + request.url, request)
@@ -82,7 +82,8 @@ function handle(res, resolve, reject) {
         resolve && resolve(data)
     } else {
 
-        reject && reject(data);
+        if (data.msg)
+            reject && reject(data.msg);
         errReject(res)
     }
 }
