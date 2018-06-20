@@ -22,7 +22,7 @@ const RouteConfig = () => (
         <App>
             <Switch>
                 <Route exact path="/" component={Home}/>
-                <Route path={'/mall_info'} component={MallInfoPage}/>
+                <Route path={'/mall_info/:id'} component={MallInfoPage}/>
             </Switch>
         </App>
     </Router>

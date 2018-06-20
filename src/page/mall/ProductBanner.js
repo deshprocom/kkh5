@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Slider from 'react-slick';
-import {getProductDetail} from '../../service/infoDao';
+import {getProductDetail} from '../../service/InfoDao';
 import {isEmptyObject} from '../../service/utils';
 import {Images,Colors} from '../../component';
 

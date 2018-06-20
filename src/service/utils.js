@@ -1,6 +1,8 @@
 import {getWeiXinSign} from './InfoDao';
 import moment from 'moment';
+import _ from 'lodash';
 
+export const _lodash = _;
 
 
 //WEB和NATIVE通行标签
@@ -13,53 +15,6 @@ export class PostRoute {
     static NATIVE_ROUTE = 'NATIVE_ROUTE';//App内跳转
 }
 
-
-
-/*时间 1小时前*/
-export function getDateDiff(dateTimeStamp) {
-
-    var minute = 1000 * 60;
-    var hour = minute * 60;
-    var day = hour * 24;
-    var halfamonth = day * 15;
-    var month = day * 30;
-    var now = new Date().getTime();
-
-    var diffValue = now - dateTimeStamp * 1000;
-    if (diffValue < 0) {
-        return;
-    }
-    var monthC = diffValue / month;
-    var weekC = diffValue / (7 * day);
-    var dayC = diffValue / day;
-    var hourC = diffValue / hour;
-    var minC = diffValue / minute;
-
-    let result = '';
-    if (monthC >= 1) {
-        result = "" + parseInt(monthC) + I18n.t('time_month');
-    }
-    else if (weekC >= 1) {
-        result = "" + parseInt(weekC) + I18n.t('time_week');
-    }
-    else if (dayC >= 1) {
-        result = "" + parseInt(dayC) + I18n.t('time_day');
-    }
-    else if (hourC >= 1) {
-        result = "" + parseInt(hourC) + I18n.t('time_hour');
-    }
-    else if (minC >= 1) {
-        result = "" + parseInt(minC) + I18n.t('time_min');
-    } else
-        result = I18n.t('time_moment');
-    return result;
-}
-
-
-/*显示轻提示*/
-export function showToast(msg) {
-    Toast.info(msg, 2)
-}
 
 export function getURLParamKey(name, search) {
     let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
@@ -142,4 +97,14 @@ export function weiXinShare(url, message) {
     }, err => {
 
     });
+}
+
+
+export function postMsg(msg) {
+    if (window.originalPostMessage) {
+        let random = Math.random().toString().slice(-6);
+        window.postMessage(random + msg);
+    } else {
+        // alert('请前往扑客APP查看');
+    }
 }

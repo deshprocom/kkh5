@@ -19,8 +19,8 @@ export function recommends(resolve, reject) {
 
 
 export function getProductDetail(body,resolve, reject) {
-    get(api.products, body,  data => {
-        resolve(data);
+    get(api.products(body.product_id), {},  ret => {
+        resolve(ret.data);
     }, reject);
 }
 
@@ -29,3 +29,6 @@ export function getWeiXinSign(payload, resolve, reject) {
         resolve(ret.data);
     }, reject)
 }
+
+
+
