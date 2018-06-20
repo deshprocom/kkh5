@@ -8,7 +8,7 @@
  */
 
 import api from '../config/api';
-import {get} from '../config/fetch'
+import {get,post} from '../config/fetch'
 
 export function recommends(resolve, reject) {
 
@@ -22,4 +22,10 @@ export function getProductDetail(body,resolve, reject) {
     get(api.products, body,  data => {
         resolve(data);
     }, reject);
+}
+
+export function getWeiXinSign(payload, resolve, reject) {
+    post(api.weixin_js_sign, payload, ret => {
+        resolve(ret.data);
+    }, reject)
 }

@@ -17,5 +17,6 @@ export default {
     production: 'https://kkapi.deshpro.com/v1/',
     recommends:'recommends',//首页推荐
     products:'shop/products/:id',//产品详情
+    weixin_js_sign: 'weixin/js_sign',
 }
 

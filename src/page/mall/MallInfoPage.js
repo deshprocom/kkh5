@@ -14,6 +14,7 @@ import ProductIntro from './ProductIntro';
 import ProductBottom from './ProductBottom';
 import {weiXinShare, isEmptyObject} from '../../service/utils';
 import {getProductDetail} from '../../service/InfoDao';
+import {Images} from '../../component';
 
 class MallInfoPage extends Component {
     state = {
@@ -42,7 +43,7 @@ class MallInfoPage extends Component {
                 title: title,
                 desc: 'macauhike',//分享描述
                 link: window.location.href, // 分享链接，该链接域名必须与当前企业的可信域名一致
-                imgUrl: isEmptyObject(icon) ? default_img : icon, // 分享图标
+                imgUrl: isEmptyObject(icon) ? Images.default_img : icon, // 分享图标
                 type: '', // 分享类型,music、video或link，不填默认为link
                 dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
             };

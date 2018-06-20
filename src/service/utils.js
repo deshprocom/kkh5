@@ -1,11 +1,7 @@
-import I18n from '../service/I18n';
-import {getWeiXinSign} from '../pages/dao/RaceDao';
+import {getWeiXinSign} from './InfoDao';
 import moment from 'moment';
-import {Toast, Modal, Button, WhiteSpace, WingBlank} from 'antd-mobile';
-import _ from 'lodash';
 
-export const _lodash = _;
-const alert = Modal.alert;
+
 
 //WEB和NATIVE通行标签
 export class PostRoute {
@@ -18,33 +14,6 @@ export class PostRoute {
 }
 
 
-export function showAlert(title, content, funcCertain) {
-    const alertInstance = alert(title, content, [
-        {text: I18n.t('cancel'), onPress: () => console.log('cancel'), style: 'default'},
-        {text: I18n.t('certain'), onPress: funcCertain},
-    ]);
-}
-
-
-export function postClick(msg, history) {
-    if (window.originalPostMessage) {
-        let random = Math.random().toString().slice(-6);
-        window.postMessage(random + msg);
-    } else {
-        showAlert(I18n.t('app_name'), "请前往扑客APP查看", () => {
-            history.push(`/loadApp`)
-        })
-    }
-}
-
-export function postMsg(msg) {
-    if (window.originalPostMessage) {
-        let random = Math.random().toString().slice(-6);
-        window.postMessage(random + msg);
-    } else {
-        // alert('请前往扑客APP查看');
-    }
-}
 
 /*时间 1小时前*/
 export function getDateDiff(dateTimeStamp) {
@@ -148,33 +117,6 @@ export function strNotNull(str) {
 }
 
 
-/*赛事状态*/
-export function raceStatusConvert(status) {
-    switch (status) {
-        case 'unbegin':
-            return I18n.t('races_unstart');
-        case 'go_ahead':
-            return I18n.t('donging');
-        case 'ended':
-            return I18n.t('ended');
-        case 'closed':
-            return I18n.t('closed');
-    }
-}
-
-/*票务状态*/
-export function ticketStatusConvert(status) {
-    switch (status) {
-        case 'unsold':
-            return I18n.t('ticket_unsold');
-        case 'selling':
-            return I18n.t('ticket_selling');
-        case 'end':
-            return I18n.t('ticket_end');
-        case 'sold_out':
-            return I18n.t('ticket_sold_out');
-    }
-}
 
 //微信二次分享
 export function weiXinShare(url, message) {
@@ -201,14 +143,3 @@ export function weiXinShare(url, message) {
 
     });
 }
-
-export function message_desc(location, begin_date, end_date) {
-    var time = convertDate(begin_date, "YYYY.MM.DD") + "-" + convertDate(end_date, "YYYY.MM.DD");
-    if (isEmptyObject(location)) {
-        return time;
-    } else {
-        return location;
-    }
-}
-
-
