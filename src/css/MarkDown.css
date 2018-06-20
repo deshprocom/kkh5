@@ -1,0 +1,51 @@
+
+.introduceGame {
+    margin: 15px;
+}
+
+.introduceGame p img {
+    width: 100% !important;
+    margin-top: 10px;
+}
+
+.mainGame .remark {
+    margin: 33px 18px 20px 21px;
+}
+
+.introduceGame h2, .introduceGame p {
+    margin: 0;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #000000 !important;
+    line-height: 2 !important;
+}
+.introduceGame li{
+    font-size: 14px;
+    color:#000000 !important;
+    line-height: 2 !important;
+}
+
+
+.pswp__button--share {
+    display: none !important;
+}
+
+/*markdown里的样式*/
+
+.mark p{
+    margin: 0;
+    margin-bottom: 22px;
+    /*text-indent: 24px;*/
+    text-align: left;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #444444;
+    line-height: 1.8 !important;
+}
+.mark img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin-top: -10px !important;
+    margin-bottom: -10px !important;
+}

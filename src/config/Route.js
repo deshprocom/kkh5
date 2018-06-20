@@ -15,14 +15,14 @@ import {
 } from 'react-router-dom'
 import App from '../App'
 import Home from '../page/Home'
-import Info from '../page/Info'
+import MallInfoPage from '../page/mall/MallInfoPage';
 
 const RouteConfig = () => (
     <Router>
         <App>
             <Switch>
                 <Route exact path="/" component={Home}/>
-                <Route path={'/info'} component={Info}/>
+                <Route path={'/mall_info'} component={MallInfoPage}/>
             </Switch>
         </App>
     </Router>

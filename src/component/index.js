@@ -8,9 +8,16 @@
  */
 import Navbar from './Navbar'
 import Footer from './Footer'
+import Images from './Themes/Images';
+import Colors from './Themes/Colors';
+import MarkDown from './MarkDown';
+
 
 
 export {
     Navbar,
-    Footer
+    Footer,
+    Images,
+    Colors,
+    MarkDown
 }

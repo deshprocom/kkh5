@@ -1,0 +1,36 @@
+const images = {
+    returnIcon: '/static/images/ReturnIcon@2x.png',
+    more: '/static/images/more.png',
+    videoControl: '/static/images/videoControl.png',
+    shopping_cart: '/static/images/mall/cart.png',
+    mall_filter: '/static/images/mall/mall_filter.png',
+    sort_down: '/static/images/mall/sort_down.png',
+    sort_up: '/static/images/mall/sort_up.png',
+    sort: '/static/images/mall/sort.png',
+    mall_del: '/static/images/mall/mall_del.png',
+    shoppingCart: '/static/images/mall/shoppingCart.png',
+    close: '/static/images/mall/close.png',
+    cut: '/static/images/mall/cut.png',
+    add: '/static/images/mall/add.png',
+    mall_return: '/static/images/mall/mall_return.png',
+    mall_share: '/static/images/mall/mall_share.png',
+    cart: '/static/images/mall/cart.png',
+    is: '/static/images/is>.png',
+    download_close: '/static/images/mall/download_close.png',
+    right: '/static/images/mall/right.png',
+    puke: '/static/images/mall/puke.png',
+    load_ios: '/static/images/load-ios.png',
+    load_android: '/static/images/android-load.png',
+    safari: '/static/images/Safari.png',
+    andorid: '/static/images/andorid.png',
+
+    comment: '/static/images/comment/comment.png',
+    pen: '/static/images/comment/pen.png',
+    commentWhite: '/static/images/comment/commentWhite.png',
+    like: '/static/images/comment/like.png',
+    likeRed: '/static/images/comment/likeRed.png',
+    forward: '/static/images/comment/forward.png',
+    home_avatar: '/static/images/home_avatar.png'
+
+}
+export default images

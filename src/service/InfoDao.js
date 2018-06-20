@@ -16,3 +16,10 @@ export function recommends(resolve, reject) {
         resolve(data)
     }, reject)
 }
+
+
+export function getProductDetail(body,resolve, reject) {
+    get(api.products, body,  data => {
+        resolve(data);
+    }, reject);
+}

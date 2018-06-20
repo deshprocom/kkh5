@@ -1,0 +1,18 @@
+.price3 {
+    -moz-text-decoration-line: line-through;
+    -o-text-decoration-line: line-through;
+    text-decoration-line: line-through;
+}
+
+.swper {
+    height: 362px;
+    width: auto;
+}
+
+.dotsClass {
+    bottom: 10px;
+}
+.page{
+    overflow: hidden;
+    z-index: 999 !important;
+}
