@@ -17,13 +17,18 @@ import {weiXinShare, isEmptyObject} from '../../service/utils';
 import {getProductDetail} from '../../service/InfoDao';
 import {Images} from '../../component';
 
-class MallInfoPage extends Component {
-    state = {
-        product: {},
-        showTip:true,
-        specShow:false,
-        selectProduct: {}
-    };
+export default class MallInfoPage extends Component {
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            product: {},
+            showTip:true,
+            specShow:false,
+            selectProduct: {}
+        };
+    }
+
 
 
     componentDidMount() {
@@ -77,8 +82,7 @@ class MallInfoPage extends Component {
 
 
     render() {
-        const{product} = this.state.product;
-        const{specShow,selectProduct} = this.state;
+        const {product,specShow,selectProduct} = this.state;
         if(isEmptyObject(product)){
             return <div/>
         }
@@ -126,5 +130,3 @@ const styles = {
     }
 
 };
-
-export default MallInfoPage;
