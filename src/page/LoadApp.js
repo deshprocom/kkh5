@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {weiXinShare} from '../service/utils';
-import '../styles/Download.css';
+import '../css/Download.css';
 import {Images} from '../component';
 
 export default class LoadApp extends Component {
@@ -11,7 +11,6 @@ export default class LoadApp extends Component {
 
     componentDidMount() {
         //微信二次分享
-        // const url = {url: "http://www.deshpro.com:3000/race/91/zh/loadApp"};
         const message = {
             title: 'PokerPro',
             desc: '德州扑客下载',//分享描述

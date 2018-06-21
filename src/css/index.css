@@ -4,13 +4,29 @@ body {
   font-family: sans-serif;
 }
 
+.same{
+  display:flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
 
 .nav-bar{
   height: 50px;
-  background-color: burlywood;
+  background-color: #E54A2E;
+}
+.nav-bar span{
+  color:white
 }
 
 .footer{
   height: 50px;
-  background-color: darkorange;
+  display:flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  background-color: #E54A2E;
+}
+.text{
+  color:white
 }

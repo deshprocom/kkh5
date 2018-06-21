@@ -11,23 +11,14 @@ import React, {Component} from 'react';
 import '../css/Home.css'
 import {Link} from 'react-router-dom'
 import {recommends} from '../service/InfoDao'
+import LoadApp from "./LoadApp";
 
 class Home extends Component {
-
-    componentDidMount() {
-        recommends(data => {
-            console.log('推荐数据', data)
-        }, err => {
-            console.log(err)
-        })
-    }
-
 
     render() {
         return (
             <div className="home">
-                <h1>正文内容区</h1>
-                <Link to={'/info'}>跳转路由</Link>
+                <LoadApp/>
 
             </div>
         );

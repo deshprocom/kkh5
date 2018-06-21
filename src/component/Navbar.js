@@ -14,8 +14,8 @@ import '../css/index.css'
 class Navbar extends Component {
     render() {
         return (
-            <div className="nav-bar">
-                <span>标题</span>
+            <div className="same nav-bar">
+                <span>澳门通</span>
 
             </div>
         );

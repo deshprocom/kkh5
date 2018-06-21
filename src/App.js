@@ -6,7 +6,7 @@ class App extends Component {
         let layout = this.props.children;
         return (
             <div>
-                <Navbar/>
+
                 {layout}
                 <Footer/>
             </div>

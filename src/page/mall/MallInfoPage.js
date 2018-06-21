@@ -32,25 +32,25 @@ class MallInfoPage extends Component {
         const body = {product_id: id};
 
         getProductDetail(body, data => {
-            console.log('productInfo', data);
+            console.log('productInfo', data.product);
 
             this.setState({
-                product: data
+                product: data.product
             });
-            // const {title, icon, description, end_date, begin_date} = data.product;
-            // document.title = title;
-            //
-            // const message = {
-            //     title: title,
-            //     desc: 'macauhike',//分享描述
-            //     link: window.location.href, // 分享链接，该链接域名必须与当前企业的可信域名一致
-            //     imgUrl: isEmptyObject(icon) ? Images.default_img : icon, // 分享图标
-            //     type: '', // 分享类型,music、video或link，不填默认为link
-            //     dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
-            // };
-            // const url = {url: window.location.href};
-            // console.log("message:", message);
-            // weiXinShare(url, message);
+            const {title, icon, description} = data.product;
+            document.title = title;
+
+            const message = {
+                title: title,
+                desc: 'macauhike',//分享描述
+                link: window.location.href, // 分享链接，该链接域名必须与当前企业的可信域名一致
+                imgUrl: isEmptyObject(icon) ? Images.default_img : icon, // 分享图标
+                type: '', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+            };
+            const url = {url: window.location.href};
+            console.log("message:", message);
+            weiXinShare(url, message);
         }, err => {
 
         });
@@ -82,6 +82,7 @@ class MallInfoPage extends Component {
         if(isEmptyObject(product)){
             return <div/>
         }
+        const {category_id,description,freight_fee,has_variants,icon,images,master,option_types,price,returnable,title,variants} = product;
         return (
 
             <div style={styles.page}>
@@ -89,9 +90,9 @@ class MallInfoPage extends Component {
                 <div style={styles.container}>
 
                     {this.state.showTip?<Tip clickTip={this._clickTip} history={this.props.history}/>:null}
-                    <ProductBanner banners={product.images}/>
+                    <ProductBanner banners={images}/>
 
-                    <ProductInfo product={product} title={product.title}/>
+                    <ProductInfo product={product} title={title}/>
 
                     <ProductSpec product={product}
                                  selectProduct={selectProduct}
@@ -99,7 +100,7 @@ class MallInfoPage extends Component {
                                  history={this.props.history}/>
 
 
-                    <ProductIntro description={product.description}/>
+                    <ProductIntro description={description}/>
 
                     <div style={{height: 80}}/>
                 </div>

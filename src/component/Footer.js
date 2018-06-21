@@ -15,7 +15,7 @@ class Footer extends Component {
     render() {
         return (
             <div className="footer">
-                <span>底部导航</span>
+                <span className="text">下载</span>
 
             </div>
         );
