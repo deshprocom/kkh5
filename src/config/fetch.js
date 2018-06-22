@@ -9,6 +9,7 @@
 
 import {create, SERVER_ERROR, TIMEOUT_ERROR, NETWORK_ERROR} from 'apisauce';
 import api from './api'
+import {strNotNull} from "../service/utils";
 
 let TAG = 'Http:';
 
@@ -82,7 +83,7 @@ function handle(res, resolve, reject) {
         resolve && resolve(data)
     } else {
 
-        if (data.msg)
+        if (strNotNull(data.msg))
             reject && reject(data.msg);
         errReject(res)
     }
