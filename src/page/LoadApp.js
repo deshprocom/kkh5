@@ -34,7 +34,7 @@ export default class LoadApp extends Component {
         this.setState({
             showAndroid: true
         });
-        window.open('http://cdn-upyun.deshpro.com/deshpro_public/pokerpro.apk');
+        window.open('http://cdn-upyun.deshpro.com/deshpro_public/macauhike.apk');
 
     };
 
