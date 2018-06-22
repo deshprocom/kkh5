@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import {getProductDetail} from '../../service/InfoDao';
 import {isEmptyObject} from '../../service/utils';
 import {Images,Colors} from '../../component';
+import '../../css/mall.css'
 
 export default class ProductBanner extends Component {
 
@@ -11,26 +12,24 @@ export default class ProductBanner extends Component {
         const {banners} = this.props;
 
         if (isEmptyObject(banners)) {
-            return <div style={styles.banner}></div>
+            return <div style={styles.banner}/>
         }
         return (
-            <div>
-                <Slider
-                    arrows={false}
-                    dotsClass="slick-dots dotsClass"
-                    dots
-                    infinite
-                    autoplay
-                    autoplaySpeed={4000}>
-                    {banners.map((item, index) => {
-                        return <div
-                            key={`banner${index}`}
-                            style={styles.banner}>
-                            <img key={`banner${index}`} style={styles.bannerImg} src={item.large}/>
-                        </div>
-                    })}
-                </Slider>
-            </div>
+            <Slider
+                arrows={false}
+                dotsClass="slick-dots dotsClass"
+                dots
+                infinite
+                autoplay
+                autoplaySpeed={4000}>
+                {banners.map((item, index) => {
+                    return <div
+                        key={`banner${index}`}
+                        style={styles.banner}>
+                        <img key={`banner${index}`} style={styles.bannerImg} src={item.large}/>
+                    </div>
+                })}
+            </Slider>
         )
 
     }

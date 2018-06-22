@@ -16,13 +16,15 @@ import {
 import App from '../App'
 import Home from '../page/Home'
 import MallInfoPage from '../page/mall/MallInfoPage';
+import LoadApp from '../page/LoadApp';
 
 const RouteConfig = () => (
     <Router>
         <App>
             <Switch>
                 <Route exact path="/" component={Home}/>
-                <Route path={'/mall_info/:id'} component={MallInfoPage}/>
+                <Route path={'/products/:id'} component={MallInfoPage}/>
+                <Route path={'/loadApp'} component={LoadApp}/>
             </Switch>
         </App>
     </Router>

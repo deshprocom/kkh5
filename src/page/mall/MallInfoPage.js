@@ -7,7 +7,6 @@
  *
  */
 import React, {Component} from 'react';
-import ProductBanner from './ProductBanner';
 import ProductInfo from './ProductInfo';
 import ProductSpec from './ProductSpec';
 import ProductIntro from './ProductIntro';
@@ -16,6 +15,9 @@ import Tip from './Tip';
 import {weiXinShare, isEmptyObject} from '../../service/utils';
 import {getProductDetail} from '../../service/InfoDao';
 import {Images} from '../../component';
+import _ from 'lodash';
+import ProductBanner from './ProductBanner';
+
 
 export default class MallInfoPage extends Component {
 
@@ -37,7 +39,7 @@ export default class MallInfoPage extends Component {
         const body = {product_id: id};
 
         getProductDetail(body, data => {
-            console.log('productInfo', data.product);
+
 
             this.setState({
                 product: data.product
@@ -83,10 +85,10 @@ export default class MallInfoPage extends Component {
 
     render() {
         const {product,specShow,selectProduct} = this.state;
-        if(isEmptyObject(product)){
-            return <div/>
-        }
-        const {category_id,description,freight_fee,has_variants,icon,images,master,option_types,price,returnable,title,variants} = product;
+
+        let {category_id,description,freight_fee,has_variants,icon,images,master,option_types,price,returnable,title,variants} = product;
+        images = _.isEmpty(images)?[]:images;//初始化写法
+
         return (
 
             <div style={styles.page}>
@@ -94,7 +96,10 @@ export default class MallInfoPage extends Component {
                 <div style={styles.container}>
 
                     {this.state.showTip?<Tip clickTip={this._clickTip} history={this.props.history}/>:null}
-                    <ProductBanner banners={images}/>
+                    <div style={{width:'100%',height:362}}>
+                        <ProductBanner banners={images}/>
+                    </div>
+
 
                     <ProductInfo product={product} title={title}/>
 

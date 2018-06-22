@@ -3,7 +3,8 @@ const images = {
     ios_app: '/images/ios_app.png',
     andorid: '/images/andorid.png',
     download_close: '/images/download_close.png',
-    cart: '/images/cart.png'
+    cart: '/images/cart.png',
+    is: '/images/is>.png'
 
 }
 export default images

@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import {MarkDown,Colors} from '../../component';
+import {MarkDown, Colors} from '../../component';
+import {strNotNull} from "../../service/utils";
+import '../../css/mall.css';
 
 export default class ProductIntro extends Component {
 
@@ -11,7 +13,8 @@ export default class ProductIntro extends Component {
                     <span style={styles.productIntro}>商品介绍</span>
                 </div>
                 <div style={styles.content}>
-                    <MarkDown style={styles.des} description={description}/>
+                    {strNotNull(description) ? <MarkDown style={styles.des} description={description}/> : null}
+
                 </div>
 
             </div>
@@ -20,30 +23,28 @@ export default class ProductIntro extends Component {
 }
 
 const styles = {
-    page:{
-        marginTop:5,
+    page: {
+        marginTop: 5,
     },
-    pageTop:{
-        height:40,
-        backgroundColor:'#FFFFFF',
-        display:'flex',
-        flexDirection:'row',
-        alignItems:'center'
+    pageTop: {
+        height: 40,
+        backgroundColor: '#FFFFFF',
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center'
     },
-    productIntro:{
+    productIntro: {
         fontSize: 14,
         color: '#333333',
-        marginLeft:17,
-        fontWeight:'bold'
+        marginLeft: 17,
+        fontWeight: 'bold'
     },
-    content:{
-        marginTop:1,
-        backgroundColor:'#FFFFFF',
-        paddingTop:11,
-        paddingBottom:100
+    content: {
+        marginTop: 1,
+        backgroundColor: '#FFFFFF',
+        paddingTop: 11,
+        paddingBottom: 100
     },
-    des:{
-
-    }
+    des: {}
 
 };
