@@ -40,7 +40,7 @@ export default class MallInfoPage extends Component {
 
         getProductDetail(body, data => {
 
-
+            console.log("ProductInfo:",data.product)
             this.setState({
                 product: data.product
             });
@@ -125,6 +125,7 @@ const styles = {
     page:{
         display: 'flex',
         flex: 1,
+        backgroundColor:'#ECECEE'
     },
     container: {
         display: 'flex',
