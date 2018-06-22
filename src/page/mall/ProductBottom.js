@@ -10,7 +10,8 @@ export default class ProductBottom extends Component {
                     <div style={styles.bottomLeftView}>
                         <div  style={styles.bottomLeft}
                               onClick={() => {
-                                  this.props.history.push("/loadApp")
+                                  this.props.history.push("/loadApp");
+                                  window.location.reload();
                               }}
                         >
                             <img style={styles.bottomLeftImg} src={Images.cart}/>
@@ -23,6 +24,7 @@ export default class ProductBottom extends Component {
                         style={styles.bottomRight}
                         onClick={() => {
                             this.props.history.push("/loadApp")
+                            window.location.reload();
                         }}
                     >
                         <span style={styles.bottomRightTxt}>添加购物车</span>

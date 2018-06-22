@@ -20,7 +20,8 @@ export default class Tip extends Component {
 
                 <div style={styles.download}
                      onClick={()=>{
-                         this.props.history.push('/loadApp')
+                         this.props.history.push('/loadApp');
+                         window.location.reload();
                      }}>
                     <img style={styles.leftImg2} src={Images.default_img}/>
                     <span style={styles.txt}>下载澳门旅行APP立即下单！</span>

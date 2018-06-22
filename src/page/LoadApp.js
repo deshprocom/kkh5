@@ -10,6 +10,7 @@ export default class LoadApp extends Component {
     };
 
     componentDidMount() {
+        document.title = "澳门旅行";
         //微信二次分享
         const message = {
             title: 'MacauHike',
