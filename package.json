@@ -24,7 +24,7 @@
     "build-test": "REACT_APP_KKAPI_ENV=test react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "react-scripts build && scp -r build/ kkh5: /deploy/production/kkh5/project",
-    "detest": "REACT_APP_DPAPI_ENV=test react-scripts build && scp -r build/ test-h5:/deploy/test/kkh5/project"
+    "deploy": "react-scripts build && scp -r build/ desh-h5:/deploy/production/kkh5/project/",
+    "detest": "REACT_APP_KKAPI_ENV=test react-scripts build && scp -r build/ test-h5:/deploy/test/kkh5/project"
   }
 }

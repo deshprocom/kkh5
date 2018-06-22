@@ -14,23 +14,20 @@ export default class ProductBanner extends Component {
             return <div style={styles.banner}/>
         }
         return (
-            <div>
-                <Slider
-                    arrows={false}
-                    dotsClass="slick-dots dotsClass"
-                    dots
-                    infinite
-                    autoplay
-                    autoplaySpeed={4000}>
-                    {banners.map((item, index) => {
-                        return <div
-                            key={`banner${index}`}
-                            style={styles.banner}>
-                            <img key={`banner${index}`} style={styles.bannerImg} src={item.large}/>
-                        </div>
-                    })}
-                </Slider>
-            </div>
+            <Slider
+                arrows={false}
+                dotsClass="slick-dots dotsClass"
+                infinite
+                autoplay
+                autoplaySpeed={4000}>
+                {banners.map((item, index) => {
+                    return <div
+                        key={`banner${index}`}
+                        style={styles.banner}>
+                        <img key={`banner${index}`} style={styles.bannerImg} src={item.large}/>
+                    </div>
+                })}
+            </Slider>
         )
 
     }
