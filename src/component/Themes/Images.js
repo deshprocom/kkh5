@@ -4,7 +4,9 @@ const images = {
     andorid: '/images/andorid.png',
     download_close: '/images/download_close.png',
     cart: '/images/cart.png',
-    is: '/images/is>.png'
+    is: '/images/is>.png',
+    Android: '/images/Android.png',
+    iPhone: '/images/iPhone.png'
 
 }
 export default images

@@ -23,7 +23,7 @@ export default class Tip extends Component {
                          this.props.history.push('/loadApp')
                      }}>
                     <img style={styles.leftImg2} src={Images.default_img}/>
-                    <span style={styles.txt}>下载澳门通APP立即下单！</span>
+                    <span style={styles.txt}>下载澳门旅行APP立即下单！</span>
                     <div style={{display:'flex',flex:1}}/>
                     {/*<img style={styles.rightImg} src={Images.download_close}/>*/}
                 </div>

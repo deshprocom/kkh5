@@ -12,8 +12,8 @@ export default class LoadApp extends Component {
     componentDidMount() {
         //微信二次分享
         const message = {
-            title: 'PokerPro',
-            desc: '德州扑客下载',//分享描述
+            title: 'MacauHike',
+            desc: '澳门旅行下载',//分享描述
             link: window.location.href, // 分享链接，该链接域名必须与当前企业的可信域名一致
             imgUrl: Images.default_img, // 分享图标
             type: '', // 分享类型,music、video或link，不填默认为link
@@ -45,31 +45,12 @@ export default class LoadApp extends Component {
                 <div className="black">
                 </div>
                 <a className="ios_app_a" onClick={this.toIosApp}>
-                    <div className="ios_app">
-                        ios-app
-                    </div>
+                    <img className="iosDownloadImg" src={Images.iPhone} alt=""/>
                 </a>
                 <a className="android_app_a" onClick={this.toAndroidApp}>
-                    <div className="android_app">
-                        android-app
-                    </div>
+                    <img className="andoridDownloadImg" src={Images.Android} alt=""/>
                 </a>
-                {this.state.show ? <div className="iosDownload" onClick={()=>{
-                    this.setState({
-                        show: false,
-                        showAndroid:false
-                    })
-                }}>
-                    <img className="iosDownloadImg" src={Images.ios_app} alt=""/>
-                </div> : null}
-                {this.state.showAndroid ? <div className="andoridDownload" onClick={()=>{
-                    this.setState({
-                        show: false,
-                        showAndroid:false
-                    })
-                }}>
-                    <img className="andoridDownloadImg" src={Images.andorid} alt=""/>
-                </div> : null}
+
             </div>
         )
     }

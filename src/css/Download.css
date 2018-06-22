@@ -1,42 +1,12 @@
 .Download {
     width:100%;
     height:100%;
-    background: url('http://h5.deshpro.com/static/images/load-app.png') no-repeat center;
+    background: url('/images/loadApp.png') no-repeat center;
     position:absolute; width:100%; height:100%; z-index:-1;
     background-size:100% 100%;
 }
 .black {
     height: 60%;
-}
-
-.Download .ios_app, .Download .android_app{
-    width: 60%;
-    height: 50px;
-    font-size: 16px;
-    line-height: 50px;
-}
-
-.Download .ios_app {
-    margin-bottom: 19px;
-    margin-left: 22%;
-    border: 2px solid #D1BC91;
-    border-radius: 5px;
-    background: url('http://h5.deshpro.com/static/images/load-ios.png') no-repeat 20px center;
-    background-size: 26px 26px;
-    text-align: center;
-    color: #D1BC91;
-}
-.Download .android_app {
-    margin-left: 22%;
-    border: 2px solid #D1BC91;
-    border-radius: 5px;
-    text-align: center;
-    background-color: #D1BC91;
-    background-image: url('http://h5.deshpro.com/static/images/android-load.png');
-    background-repeat: no-repeat;
-    background-position: 20px;
-    background-size: 26px 26px;
-    color: #000;
 }
 
 .iosDownload{
@@ -65,11 +35,23 @@
     left:0;
 }
 .iosDownloadImg{
-    width:90%;
-    margin-left: 30px;
+   width:60%;
+    height:65px;
 }
 .andoridDownloadImg{
-
-    width:90%;
-    margin-left: 30px;
+    width:60%;
+    height:65px;
+}
+.ios_app_a{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+.android_app_a{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    margin-top: 20px;
 }
