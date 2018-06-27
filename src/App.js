@@ -1,5 +1,17 @@
 import React, {Component} from 'react';
-import {Navbar,Footer} from './component'
+import {Navbar,Footer} from './component';
+
+global.console = {
+    info: () => {
+    },
+    log: () => {
+    },
+    warn: () => {
+    },
+    error: () => {
+    },
+};
+
 
 class App extends Component {
     render() {
