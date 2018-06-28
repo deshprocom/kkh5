@@ -17,11 +17,12 @@ export default {
     production: 'https://kkapi.deshpro.com/v1/',
     recommends:'recommends',//首页推荐
     products:products,//产品详情
-    weixin_js_sign: 'weixin/js_sign',
+    weixin_js_sign: 'weixin/js_sign'
 }
 
 
 function products(id) {
     return `shop/products/${id}`
 }
+
 

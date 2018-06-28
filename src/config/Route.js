@@ -25,7 +25,6 @@ const RouteConfig = () => (
                 <Route exact path="/" component={Home}/>
                 <Route path={'/products/:id'} component={MallInfoPage}/>
                 <Route path={'/loadApp'} component={LoadApp}/>
-                <Route path={'/products/:id/loadApp'} component={LoadApp}/>
             </Switch>
         </App>
     </Router>
