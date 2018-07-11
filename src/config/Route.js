@@ -17,6 +17,7 @@ import App from '../App'
 import Home from '../page/Home'
 import MallInfoPage from '../page/mall/MallInfoPage';
 import LoadApp from '../page/LoadApp';
+import InviteLoad from '../page/InviteLoad';
 
 const RouteConfig = () => (
     <Router>
@@ -25,6 +26,7 @@ const RouteConfig = () => (
                 <Route exact path="/" component={Home}/>
                 <Route path={'/products/:id'} component={MallInfoPage}/>
                 <Route path={'/loadApp'} component={LoadApp}/>
+                <Route path={'/invite_load'} component={InviteLoad}/>
             </Switch>
         </App>
     </Router>
