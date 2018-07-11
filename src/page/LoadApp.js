@@ -6,7 +6,7 @@ import {Images} from '../component';
 export default class LoadApp extends Component {
     state = {
         show: false,
-        showAndroid:false
+        showAndroid: false
     };
 
     componentDidMount() {
@@ -32,27 +32,32 @@ export default class LoadApp extends Component {
 
     };
     toAndroidApp = () => {
+        window.open('http://cdn-upyun.deshpro.com/deshpro_public/macauhike.apk');
         this.setState({
             showAndroid: true
         });
-        window.open('http://cdn-upyun.deshpro.com/deshpro_public/macauhike.apk');
-
     };
 
 
     render() {
         return (
-            <div className="Download">
-                <div className="black">
-                </div>
-                <a className="ios_app_a" onClick={this.toIosApp}>
-                    <img className="iosDownloadImg" src={Images.iPhone} alt=""/>
-                </a>
-                <a className="android_app_a" onClick={this.toAndroidApp}>
-                    <img className="andoridDownloadImg" src={Images.Android} alt=""/>
-                </a>
+            <div style={{display: 'flex', flex: 1, width: '100%'}}>
+                {this.state.showAndroid ?
+                    <img style={{width: '90%', height: 100, alignSelf: 'center'}} src={Images.safari} alt=""/> : null}
+                <div className="Download" style={this.state.showAndroid ? {marginTop: 100} : null}>
+                    <div className="black">
+                    </div>
+                    <a className="ios_app_a" onClick={this.toIosApp}>
+                        <img className="iosDownloadImg" src={Images.iPhone} alt=""/>
+                    </a>
 
+                    <a className="android_app_a" onClick={this.toAndroidApp}>
+                        <img className="andoridDownloadImg" src={Images.Android} alt=""/>
+                    </a>
+
+                </div>
             </div>
+
         )
     }
 }

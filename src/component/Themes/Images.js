@@ -6,7 +6,8 @@ const images = {
     cart: '/images/cart.png',
     is: '/images/is>.png',
     Android: '/images/Android.png',
-    iPhone: '/images/iPhone.png'
+    iPhone: '/images/iPhone.png',
+    safari: '/images/Safari.png'
 
 }
 export default images
