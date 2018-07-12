@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {weiXinShare, checkPhone2, strNotNull,checkPwd} from '../service/utils';
+import {weiXinShare, checkPhone2, strNotNull, checkPwd} from '../service/utils';
 import '../css/invite.css';
 import {Images} from '../component';
-import {postVCode,postVerifyCode} from '../service/InfoDao'
+import {postVCode, postVerifyCode, postRegister} from '../service/InfoDao'
 
 export default class InviteLoad extends Component {
     state = {
@@ -38,6 +38,9 @@ export default class InviteLoad extends Component {
                             ext: text
                         })
                     }}>
+                <option selected
+                        value="select">选择地区
+                </option>
                 <option
                     value="86">大陆&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;86
                 </option>
@@ -56,7 +59,7 @@ export default class InviteLoad extends Component {
 
     _sendCode = () => {
         const {phone, ext} = this.state;
-        if (checkPhone2(phone,ext) && strNotNull(ext)) {
+        if (checkPhone2(phone, ext) && strNotNull(ext)) {
             const body = {
                 option_type: 'register',
                 vcode_type: 'mobile',
@@ -77,9 +80,9 @@ export default class InviteLoad extends Component {
         }
     };
 
-    checkVcode=()=>{
+    checkVcode = () => {
         const {phone, password, vcode, ext, show_select} = this.state;
-        if (checkPhone2(phone,ext)) {
+        if (checkPhone2(phone, ext)) {
             let body = {
                 option_type: 'register',
                 vcode_type: 'mobile',
@@ -88,13 +91,32 @@ export default class InviteLoad extends Component {
                 ext: ext
             };
             postVerifyCode(body, (ret) => {
-                if(ret.msg === 'ok'){
+                if (ret.msg === 'ok') {
                     return true;
                 }
             }, (err) => {
-                console.log("验证码错误",err)
+                console.log("验证码错误", err)
             })
         }
+    };
+
+    _register = () => {
+        const {phone, password, vcode, ext, show_select} = this.state;
+        let body = {
+            vcode: vcode,
+            password: password,
+            type: 'mobile',
+            mobile: phone,
+            ext: ext,
+            invite_code: this.props.params.id
+        };
+        postRegister(body, data => {
+            // this._toHome(data);
+            alert("注册成功");
+        }, err => {
+            console.log(err)
+        })
+
     }
 
     render() {
@@ -131,11 +153,12 @@ export default class InviteLoad extends Component {
                         <input className="input" type="text" name={this.state.phone} id={this.state.phone}
                                placeholder="输入手机号"/>
                     </div>
-                    <div className="view view2" style={{marginBottom:2}}>
+                    <div className="view view2" style={{marginBottom: 2}}>
                         <input className="input" type="text" name={this.state.password} id={this.state.password}
                                placeholder="输入密码"/>
                     </div>
-                    <span style={{display:'block',marginBottom:10,marginLeft:22,alignSelf: 'center',
+                    <span style={{
+                        display: 'block', marginBottom: 10, marginLeft: 22, alignSelf: 'center',
                         color: '#AAAAAA', fontSize: 12
                     }}>密码由6-20位英文字母+数字组成，如dzpk123</span>
 
@@ -153,8 +176,8 @@ export default class InviteLoad extends Component {
                         <div style={{
                             width: 100, height: 41, backgroundColor: '#e54a2e', display: 'flex',
                             alignItems: 'center', justifyContent: 'center', borderRadius: 3
-                        }} onClick={()=>{
-                            if(checkPhone2(phone, ext)){
+                        }} onClick={() => {
+                            if (checkPhone2(phone, ext)) {
                                 this._sendCode();
                             }
                         }}>
@@ -163,6 +186,8 @@ export default class InviteLoad extends Component {
                     </div>
                     <div className="view complete" onClick={() => {
                         if (checkPhone2(phone, ext) && this.checkVcode(vcode) && checkPwd(password)) {
+
+                            this._register();
                             this.props.history.push("/loadApp");
                             window.location.reload();
                         }

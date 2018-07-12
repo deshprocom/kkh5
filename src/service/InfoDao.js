@@ -10,6 +10,16 @@
 import api from '../config/api';
 import {get,post} from '../config/fetch'
 
+
+/*注册*/
+export function postRegister(body, resolve, reject) {
+    post(api.register, body, (ret) => {
+        // setLoginData(ret.data);
+
+        resolve(ret.data);
+    }, reject);
+}
+
 /*检验验证码是否正确*/
 export function postVerifyCode(body, resolve, reject) {
    post(api.account_verify, body, resolve, reject);

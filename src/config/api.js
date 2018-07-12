@@ -19,7 +19,8 @@ export default {
     products: products,//产品详情
     weixin_js_sign: 'weixin/js_sign',
     v_codes: 'account/v_codes',
-    account_verify: 'account/verify_vcode'
+    account_verify: 'account/verify_vcode',
+    register: 'account/register'
 }
 
 
