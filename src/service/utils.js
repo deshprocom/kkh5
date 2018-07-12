@@ -91,7 +91,21 @@ export function checkPhone2(phone, ext) {
     }
 }
 
+//检查验证码
+var myreg3 = /^\d{4,6}$/;
+export function checkVcode(vcode) {
+    if (!myreg3.test(vcode.trim())) {
+        alert("请输入正确的验证码");
+        return false;
+    }else{
+        return true;
+    }
+}
 
+//检查密码
+export function checkPwd(pwd) {
+
+}
 
 //微信二次分享
 export function weiXinShare(url, message) {

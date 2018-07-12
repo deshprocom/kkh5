@@ -10,6 +10,18 @@
 import api from '../config/api';
 import {get,post} from '../config/fetch'
 
+/*检验验证码是否正确*/
+export function postVerifyCode(body, resolve, reject) {
+   post(api.account_verify, body, resolve, reject);
+}
+
+
+export function postVCode(body, resolve, reject) {
+    post(api.v_codes, body, (ret) => {
+        resolve(ret.data);
+    }, reject);
+}
+
 export function recommends(resolve, reject) {
 
     get(api.recommends, {page:0,page_size:20}, data => {

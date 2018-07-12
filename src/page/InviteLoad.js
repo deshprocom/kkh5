@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import {weiXinShare, checkPhone2, strNotNull} from '../service/utils';
+import {weiXinShare, checkPhone2, strNotNull,checkPwd} from '../service/utils';
 import '../css/invite.css';
 import {Images} from '../component';
+import {postVCode,postVerifyCode} from '../service/InfoDao'
 
 export default class InviteLoad extends Component {
     state = {
@@ -51,6 +52,49 @@ export default class InviteLoad extends Component {
                 </option>
             </select>
         )
+    };
+
+    _sendCode = () => {
+        const {phone, ext} = this.state;
+        if (checkPhone2(phone,ext) && strNotNull(ext)) {
+            const body = {
+                option_type: 'register',
+                vcode_type: 'mobile',
+                mobile: phone,
+                ext: ext
+            };
+
+            postVCode(body, ret => {
+
+                if (body.vcode_type === 'mobile') {
+                    alert('已发送到手机，注意查看短信')
+                }
+            }, err => {
+                alert(err);
+            });
+
+
+        }
+    };
+
+    checkVcode=()=>{
+        const {phone, password, vcode, ext, show_select} = this.state;
+        if (checkPhone2(phone,ext)) {
+            let body = {
+                option_type: 'register',
+                vcode_type: 'mobile',
+                account: phone,
+                vcode: vcode,
+                ext: ext
+            };
+            postVerifyCode(body, (ret) => {
+                if(ret.msg === 'ok'){
+                    return true;
+                }
+            }, (err) => {
+                console.log("验证码错误",err)
+            })
+        }
     }
 
     render() {
@@ -87,10 +131,15 @@ export default class InviteLoad extends Component {
                         <input className="input" type="text" name={this.state.phone} id={this.state.phone}
                                placeholder="输入手机号"/>
                     </div>
-                    <div className="view view2">
+                    <div className="view view2" style={{marginBottom:2}}>
                         <input className="input" type="text" name={this.state.password} id={this.state.password}
                                placeholder="输入密码"/>
                     </div>
+                    <span style={{display:'block',marginBottom:10,marginLeft:22,alignSelf: 'center',
+                        color: '#AAAAAA', fontSize: 12
+                    }}>密码由6-20位英文字母+数字组成，如dzpk123</span>
+
+
                     <div className="view" style={{
                         backgroundColor: 'white',
                         display: 'flex',
@@ -104,12 +153,16 @@ export default class InviteLoad extends Component {
                         <div style={{
                             width: 100, height: 41, backgroundColor: '#e54a2e', display: 'flex',
                             alignItems: 'center', justifyContent: 'center', borderRadius: 3
+                        }} onClick={()=>{
+                            if(checkPhone2(phone, ext)){
+                                this._sendCode();
+                            }
                         }}>
                             <span style={{color: "white", fontSize: 14}}>获取验证码</span>
                         </div>
                     </div>
                     <div className="view complete" onClick={() => {
-                        if (checkPhone2(phone, ext)) {
+                        if (checkPhone2(phone, ext) && this.checkVcode(vcode) && checkPwd(password)) {
                             this.props.history.push("/loadApp");
                             window.location.reload();
                         }

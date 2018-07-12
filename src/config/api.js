@@ -15,9 +15,11 @@ export default {
     test: 'http://test.kkapi.deshpro.com/v1/',
     //production 用来发布正式生产环境
     production: 'https://kkapi.deshpro.com/v1/',
-    recommends:'recommends',//首页推荐
-    products:products,//产品详情
-    weixin_js_sign: 'weixin/js_sign'
+    recommends: 'recommends',//首页推荐
+    products: products,//产品详情
+    weixin_js_sign: 'weixin/js_sign',
+    v_codes: 'account/v_codes',
+    account_verify: 'account/verify_vcode'
 }
 
 
