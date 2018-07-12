@@ -20,11 +20,11 @@
       <file leaf-file-name="InviteLoad.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/page/InviteLoad.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="128" column="27" lean-forward="true" selection-start-line="128" selection-start-column="27" selection-end-line="128" selection-end-column="27" />
+            <state relative-caret-position="76">
+              <caret line="41" column="24" lean-forward="false" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <marker date="1531381902000" expanded="false" signature="9503:9511" ph="..." />
+                <marker date="1531381989000" expanded="false" signature="9549:9557" ph="..." />
               </folding>
             </state>
           </provider>
@@ -95,8 +95,8 @@
       <file leaf-file-name="Route.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/config/Route.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="28" column="42" lean-forward="false" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="42" />
+            <state relative-caret-position="340">
+              <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="38" />
               <folding>
                 <element signature="e#111#136#0" expanded="true" />
               </folding>
@@ -204,7 +204,7 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="501" />
+    <option name="x" value="389" />
     <option name="y" value="23" />
     <option name="width" value="1586" />
     <option name="height" value="971" />
@@ -349,7 +349,7 @@
       <workItem from="1530954652461" duration="3199000" />
       <workItem from="1531303784045" duration="2824000" />
       <workItem from="1531306643207" duration="29000" />
-      <workItem from="1531360622487" duration="14564000" />
+      <workItem from="1531360622487" duration="14710000" />
     </task>
     <task id="LOCAL-00001" summary="错误日志">
       <created>1529381386805</created>
@@ -561,14 +561,21 @@
       <option name="project" value="LOCAL" />
       <updated>1531376067722</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="分享页面">
+      <created>1531381912999</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1531381912999</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87557000" />
+    <option name="totallyTimeSpent" value="87703000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="501" y="23" width="1586" height="971" extended-state="0" />
+    <frame x="389" y="23" width="1586" height="971" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20319489" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -808,6 +815,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -955,16 +963,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/Route.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="28" column="42" lean-forward="false" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="42" />
-          <folding>
-            <element signature="e#111#136#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/config/api.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -981,13 +979,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/Route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="38" />
+          <folding>
+            <element signature="e#111#136#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/page/InviteLoad.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="128" column="27" lean-forward="true" selection-start-line="128" selection-start-column="27" selection-end-line="128" selection-end-column="27" />
+        <state relative-caret-position="76">
+          <caret line="41" column="24" lean-forward="false" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <marker date="1531381902000" expanded="false" signature="9503:9511" ph="..." />
+            <marker date="1531381989000" expanded="false" signature="9549:9557" ph="..." />
           </folding>
         </state>
       </provider>
