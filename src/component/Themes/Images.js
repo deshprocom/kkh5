@@ -8,7 +8,8 @@ const images = {
     Android: '/images/Android.png',
     iPhone: '/images/iPhone.png',
     safari: '/images/Safari.png',
-    load_yaoqing: '/images/load_yaoqing.png'
+    load_yaoqing: '/images/load_yaoqing.png',
+    bottomarea: '/images/bottomarea.png'
 
 }
 export default images

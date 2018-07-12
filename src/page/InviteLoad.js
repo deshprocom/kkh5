@@ -30,20 +30,28 @@ export default class InviteLoad extends Component {
     render() {
         return (
             <div className="invite_page" style={{display: 'flex', flex: 1, width: '100%',flexDirection:'column',alignItems:'center'}}>
-                <div style={{paddingTop:22,paddingLeft:22,paddingRight:22,paddingBottom:19,marginTop:250,
+                <div style={{paddingTop:22,paddingLeft:12,paddingRight:12,paddingBottom:19,marginTop:230,
                     backgroundColor:'white',borderRadius:3,flexDirection:'column',alignItems:'center',marginRight:22,marginLeft:22
                 }}>
-                    <div className="view view2">
+                    <div className="view view2" style={{display:'flex',flexDirection:'row'}}>
+                        <input className="input"  type="text" name={this.state.phone} id="" placeholder="选择地区"/>
+                        <div style={{display:'flex',flex:1}}/>
+                        <img  style={{width:13,height:9,marginRight:17}} src={Images.bottomarea}/>
+                    </div>
 
+                    <div className="view view2">
+                        <input className="input"  type="text" name={this.state.phone} id="" placeholder="输入手机号"/>
                     </div>
                     <div className="view view2">
-
+                        <input  className="input" type="text" name={this.state.password} id="" placeholder="输入密码" />
                     </div>
-                    <div className="view" style={{display:'flex',flexDirection:'row',alignItems:'center'}}>
-                        <div style={{width:150,height:41,backgroundColor:'#f5f5f5'}}>
-
+                    <div className="view" style={{backgroundColor:'white',display:'flex',flexDirection:'row',alignItems:'center'}}>
+                        <div style={{width:140,height:41,backgroundColor:'#f5f5f5'}}>
+                            <input  className="input" type="text" name={this.state.vcode} id="" />
                         </div>
-                        <div style={{marginLeft:10,width:100,height:41,backgroundColor:'#e54a2e',display:'flex',alignItems:'center',justifyContent:'center'}}>
+                        <div style={{width:20,height:41,backgroundColor:'white'}}/>
+                        <div style={{width:100,height:41,backgroundColor:'#e54a2e',display:'flex',
+                            alignItems:'center',justifyContent:'center',borderRadius:3}}>
                             <span style={{color:"white",fontSize:14}}>获取验证码</span>
                         </div>
                     </div>
