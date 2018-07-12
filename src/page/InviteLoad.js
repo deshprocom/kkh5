@@ -30,8 +30,8 @@ export default class InviteLoad extends Component {
     render() {
         return (
             <div className="invite_page" style={{display: 'flex', flex: 1, width: '100%',flexDirection:'column',alignItems:'center'}}>
-                <div style={{paddingTop:22,paddingLeft:22,paddingRight:22,paddingBottom:19,marginTop:200,
-                    backgroundColor:'white',borderRadius:3,flexDirection:'column',alignItems:'center'
+                <div style={{paddingTop:22,paddingLeft:22,paddingRight:22,paddingBottom:19,marginTop:250,
+                    backgroundColor:'white',borderRadius:3,flexDirection:'column',alignItems:'center',marginRight:22,marginLeft:22
                 }}>
                     <div className="view view2">
 
@@ -39,11 +39,16 @@ export default class InviteLoad extends Component {
                     <div className="view view2">
 
                     </div>
-                    <div className="view">
+                    <div className="view" style={{display:'flex',flexDirection:'row',alignItems:'center'}}>
+                        <div style={{width:150,height:41,backgroundColor:'#f5f5f5'}}>
 
+                        </div>
+                        <div style={{marginLeft:10,width:100,height:41,backgroundColor:'#e54a2e',display:'flex',alignItems:'center',justifyContent:'center'}}>
+                            <span style={{color:"white",fontSize:14}}>获取验证码</span>
+                        </div>
                     </div>
-                    <div className="view">
-
+                    <div className="view complete">
+                        <span style={{color:"white",fontSize:16}}>完成</span>
                     </div>
                 </div>
             </div>
