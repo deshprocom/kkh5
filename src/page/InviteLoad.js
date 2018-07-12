@@ -95,11 +95,10 @@ export default class InviteLoad extends Component {
                 ext: ext
             };
             postVerifyCode(body, (ret) => {
-                if (ret.msg === 'ok') {
-                    return true;
-                }
+                return true;
             }, (err) => {
-                console.log("验证码错误", err)
+                console.log("验证码错误", err);
+                alert(err)
             })
         }
     };
@@ -129,7 +128,6 @@ export default class InviteLoad extends Component {
         let crowdown = 60;
         setInterval(() => {
             if (crowdown === 0) {
-                clearInterval(this.siv());
                 this.setState({getCodeDisable: true})
             }else{
                 crowdown = crowdown-1;
@@ -230,7 +228,7 @@ export default class InviteLoad extends Component {
                         </div>
                     </div>
                     <div className="view complete" onClick={() => {
-                        if (checkPhone2(phone, ext) && this.checkVcode(vcode) && checkPwd(password)) {
+                        if (checkPhone2(phone, ext) && checkPwd(password) && this.checkVcode(vcode) ) {
                             this._register();
                         }
                     }}>

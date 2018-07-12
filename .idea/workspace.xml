@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0a462c0f-f436-4bac-94a8-55b5f3c75700" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/config/api.js" afterPath="$PROJECT_DIR$/src/config/api.js" />
       <change beforePath="$PROJECT_DIR$/src/page/InviteLoad.js" afterPath="$PROJECT_DIR$/src/page/InviteLoad.js" />
-      <change beforePath="$PROJECT_DIR$/src/service/utils.js" afterPath="$PROJECT_DIR$/src/service/utils.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,11 +20,11 @@
       <file leaf-file-name="InviteLoad.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/page/InviteLoad.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="138" column="17" lean-forward="true" selection-start-line="138" selection-start-column="17" selection-end-line="138" selection-end-column="17" />
+            <state relative-caret-position="217">
+              <caret line="128" column="27" lean-forward="true" selection-start-line="128" selection-start-column="27" selection-end-line="128" selection-end-column="27" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <marker date="1531376042000" expanded="false" signature="9579:9587" ph="..." />
+                <marker date="1531381902000" expanded="false" signature="9503:9511" ph="..." />
               </folding>
             </state>
           </provider>
@@ -67,8 +65,8 @@
       <file leaf-file-name="utils.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/service/utils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="151" column="30" lean-forward="true" selection-start-line="151" selection-start-column="30" selection-end-line="151" selection-end-column="30" />
+            <state relative-caret-position="143">
+              <caret line="112" column="58" lean-forward="false" selection-start-line="112" selection-start-column="58" selection-end-line="112" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -206,7 +204,7 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="539" />
+    <option name="x" value="501" />
     <option name="y" value="23" />
     <option name="width" value="1586" />
     <option name="height" value="971" />
@@ -351,7 +349,7 @@
       <workItem from="1530954652461" duration="3199000" />
       <workItem from="1531303784045" duration="2824000" />
       <workItem from="1531306643207" duration="29000" />
-      <workItem from="1531360622487" duration="13648000" />
+      <workItem from="1531360622487" duration="14564000" />
     </task>
     <task id="LOCAL-00001" summary="错误日志">
       <created>1529381386805</created>
@@ -556,14 +554,21 @@
       <option name="project" value="LOCAL" />
       <updated>1531374574083</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="分享页面">
+      <created>1531376067722</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1531376067722</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86641000" />
+    <option name="totallyTimeSpent" value="87557000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="539" y="23" width="1586" height="971" extended-state="0" />
+    <frame x="501" y="23" width="1586" height="971" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20319489" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -607,7 +612,8 @@
     <MESSAGE value="用户注册页面" />
     <MESSAGE value="密码验证" />
     <MESSAGE value="验证码" />
-    <option name="LAST_COMMIT_MESSAGE" value="验证码" />
+    <MESSAGE value="分享页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="分享页面" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -969,19 +975,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/service/utils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="151" column="30" lean-forward="true" selection-start-line="151" selection-start-column="30" selection-end-line="151" selection-end-column="30" />
+        <state relative-caret-position="143">
+          <caret line="112" column="58" lean-forward="false" selection-start-line="112" selection-start-column="58" selection-end-line="112" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/page/InviteLoad.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="138" column="17" lean-forward="true" selection-start-line="138" selection-start-column="17" selection-end-line="138" selection-end-column="17" />
+        <state relative-caret-position="217">
+          <caret line="128" column="27" lean-forward="true" selection-start-line="128" selection-start-column="27" selection-end-line="128" selection-end-column="27" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <marker date="1531376042000" expanded="false" signature="9579:9587" ph="..." />
+            <marker date="1531381902000" expanded="false" signature="9503:9511" ph="..." />
           </folding>
         </state>
       </provider>
