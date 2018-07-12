@@ -70,11 +70,13 @@ export function strNotNull(str) {
         return true;
     }
 }
+
 /*判断是否为Null*/
 
 var myreg = /^\d{5,20}$/;
 
 var myreg2 = /^1(3|4|5|7|8)\d{9}$/;
+
 //检查手机和地区
 export function checkPhone2(phone, ext) {
     if (!strNotNull(ext)) {
@@ -93,18 +95,29 @@ export function checkPhone2(phone, ext) {
 
 //检查验证码
 var myreg3 = /^\d{4,6}$/;
+
 export function checkVcode(vcode) {
     if (!myreg3.test(vcode.trim())) {
         alert("请输入正确的验证码");
         return false;
-    }else{
+    } else {
         return true;
     }
 }
 
 //检查密码
-export function checkPwd(pwd) {
+/*有效的密码格式满足的条件
+     1, 长度必须6 - 20位
+     2, 必须是 数字+字母 或 数字 + 特殊字符 或 字母+特殊字符 或 数字 + 字母 + 特殊字符的组合*/
+var PWD_VALID_FORMAT_REGEX = /^(?![\d]+$)(?![a-zA-Z]+$)(?![^\da-zA-Z]+$).{6,20}$/;
 
+export function checkPwd(password) {
+    if (PWD_VALID_FORMAT_REGEX.test(password))
+        return true;
+    else {
+        alert('密码格式不正确');
+        return false;
+    }
 }
 
 //微信二次分享
