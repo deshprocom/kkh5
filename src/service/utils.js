@@ -70,6 +70,26 @@ export function strNotNull(str) {
         return true;
     }
 }
+/*判断是否为Null*/
+
+var myreg = /^\d{5,20}$/;
+
+var myreg2 = /^1(3|4|5|7|8)\d{9}$/;
+//检查手机和地区
+export function checkPhone2(phone, ext) {
+    if (!strNotNull(ext)) {
+        alert("请选择区号")
+    } else if (phone != null && phone != undefined) {
+        if (ext === '86' && !myreg2.test(phone.trim())) {
+            alert("请输入正确的手机号");
+            return false;
+        } else if (!myreg.test(phone.trim())) {
+            alert("请输入正确的手机号");
+            return false;
+        }
+        return true;
+    }
+}
 
 
 
