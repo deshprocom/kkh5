@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {weiXinShare, checkPhone2, strNotNull, checkPwd} from '../service/utils';
+import {weiXinShare, checkPhone2, strNotNull, checkPwd,getQueryVariable} from '../service/utils';
 import '../css/invite.css';
 import {Images} from '../component';
 import {postVCode, postVerifyCode, postRegister} from '../service/InfoDao';
@@ -17,6 +17,7 @@ export default class InviteLoad extends Component {
 
     componentDidMount() {
         document.title = "澳门旅行";
+        console.log("分享用户的ID",getQueryVariable('id'))
         //微信二次分享
         const message = {
             title: 'MacauHike',
@@ -111,11 +112,13 @@ export default class InviteLoad extends Component {
             type: 'mobile',
             mobile: phone,
             ext: ext,
-            invite_code: this.props.match.params.id
+            invite_code: getQueryVariable("id")
         };
         postRegister(body, data => {
             // this._toHome(data);
             alert("注册成功");
+            this.props.history.push("/loadApp");
+            window.location.reload();
         }, err => {
             console.log(err)
         })
@@ -228,10 +231,7 @@ export default class InviteLoad extends Component {
                     </div>
                     <div className="view complete" onClick={() => {
                         if (checkPhone2(phone, ext) && this.checkVcode(vcode) && checkPwd(password)) {
-
                             this._register();
-                            this.props.history.push("/loadApp");
-                            window.location.reload();
                         }
                     }}>
                         <span style={{color: "white", fontSize: 16}}>完成</span>

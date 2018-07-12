@@ -27,5 +27,3 @@ export default {
 function products(id) {
     return `shop/products/${id}`
 }
-
-
