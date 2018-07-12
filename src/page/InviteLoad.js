@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {weiXinShare, checkPhone2, strNotNull, checkPwd} from '../service/utils';
 import '../css/invite.css';
 import {Images} from '../component';
-import {postVCode, postVerifyCode, postRegister} from '../service/InfoDao'
+import {postVCode, postVerifyCode, postRegister} from '../service/InfoDao';
 
 export default class InviteLoad extends Component {
     state = {
@@ -10,7 +10,9 @@ export default class InviteLoad extends Component {
         vcode: '',
         password: '',
         ext: '86',
-        show_select: false
+        show_select: false,
+        getCodeDisable: true,
+        timer: 60
     };
 
     componentDidMount() {
@@ -66,9 +68,12 @@ export default class InviteLoad extends Component {
             };
 
             postVCode(body, ret => {
-
+                this.setState({
+                    getCodeDisable: false
+                });
                 if (body.vcode_type === 'mobile') {
-                    alert('已发送到手机，注意查看短信')
+                    alert('已发送到手机，注意查看短信');
+                    this.siv();
                 }
             }, err => {
                 alert(err);
@@ -106,7 +111,7 @@ export default class InviteLoad extends Component {
             type: 'mobile',
             mobile: phone,
             ext: ext,
-            invite_code: this.props.params.id
+            invite_code: this.props.match.params.id
         };
         postRegister(body, data => {
             // this._toHome(data);
@@ -115,10 +120,27 @@ export default class InviteLoad extends Component {
             console.log(err)
         })
 
-    }
+    };
+
+    siv = () => {
+        let crowdown = 60;
+        setInterval(() => {
+            if (crowdown === 0) {
+                clearInterval(this.siv());
+                this.setState({getCodeDisable: true})
+            }else{
+                crowdown = crowdown-1;
+                this.setState({timer: crowdown, getCodeDisable: false});
+            }
+
+        }, 1000);
+    };
+
 
     render() {
-        const {phone, password, vcode, ext, show_select} = this.state;
+
+        const {phone, password, vcode, ext, show_select, getCodeDisable, timer} = this.state;
+
         return (
             <div className="invite_page"
                  style={{display: 'flex', flex: 1, width: '100%', flexDirection: 'column', alignItems: 'center'}}>
@@ -152,7 +174,7 @@ export default class InviteLoad extends Component {
                                placeholder="输入手机号" onChange={(input) => {
 
                             this.setState({
-                                phone:input.target.value
+                                phone: input.target.value
                             })
                         }}/>
                     </div>
@@ -160,7 +182,7 @@ export default class InviteLoad extends Component {
                         <input className="input" type="text" name={this.state.password} id={this.state.password}
                                placeholder="输入密码" onChange={(input) => {
                             this.setState({
-                                password:input.target.value
+                                password: input.target.value
                             })
                         }}/>
                     </div>
@@ -179,20 +201,29 @@ export default class InviteLoad extends Component {
                         <div style={{width: 140, height: 41, backgroundColor: '#f5f5f5'}}>
                             <input className="input" type="text" name={this.state.vcode} id="" onChange={(input) => {
                                 this.setState({
-                                    vcode:input.target.value
+                                    vcode: input.target.value
                                 })
                             }}/>
                         </div>
                         <div style={{width: 20, height: 41, backgroundColor: 'white'}}/>
                         <div style={{
-                            width: 100, height: 41, backgroundColor: '#e54a2e', display: 'flex',
-                            alignItems: 'center', justifyContent: 'center', borderRadius: 3
+                            width: 100,
+                            height: 41,
+                            backgroundColor: getCodeDisable ? '#e54a2e' : '#747474',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            borderRadius: 3
                         }} onClick={() => {
-                            if (checkPhone2(phone, ext)) {
+                            if (checkPhone2(phone, ext) && getCodeDisable) {
                                 this._sendCode();
                             }
                         }}>
-                            <span style={{color: "white", fontSize: 14}}>获取验证码</span>
+                            <span style={{
+                                color: getCodeDisable ? 'white' : "#BBBBBB",
+                                fontSize: 14
+                            }}>{getCodeDisable ? '获取验证码' : `${timer}s`}</span>
+
                         </div>
                     </div>
                     <div className="view complete" onClick={() => {
@@ -210,4 +241,11 @@ export default class InviteLoad extends Component {
 
         )
     }
+
+    _can_get_code = () => {
+        console.log('_can_get_code')
+        this.setState({
+            getCodeDisable: false
+        });
+    };
 }
