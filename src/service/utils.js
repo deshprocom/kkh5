@@ -79,6 +79,8 @@ var myreg2 = /^1(3|4|5|7|8)\d{9}$/;
 
 //检查手机和地区
 export function checkPhone2(phone, ext) {
+    console.log("phone:",phone);
+    console.log("ext:",ext);
     if (!strNotNull(ext)) {
         alert("请选择区号")
     } else if (phone != null && phone != undefined) {

@@ -9,7 +9,7 @@ export default class InviteLoad extends Component {
         phone: '',
         vcode: '',
         password: '',
-        ext: '选择地区',
+        ext: '86',
         show_select: false
     };
 
@@ -33,14 +33,12 @@ export default class InviteLoad extends Component {
             <select defaultValue="选择地区" className="input2" style={{width: 260, height: 41, backgroundColor: '#f5f5f5'}}
                     name={this.state.ext} value={this.state.ext}
                     onChange={(text) => {
-                        console.log("dshdjs", this.state.ext)
+                        let value = text.target.value;
                         this.setState({
-                            ext: text
+                            ext: value
                         })
                     }}>
-                <option selected
-                        value="select">选择地区
-                </option>
+
                 <option
                     value="86">大陆&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;86
                 </option>
@@ -151,11 +149,20 @@ export default class InviteLoad extends Component {
 
                     <div className="view view2">
                         <input className="input" type="text" name={this.state.phone} id={this.state.phone}
-                               placeholder="输入手机号"/>
+                               placeholder="输入手机号" onChange={(input) => {
+
+                            this.setState({
+                                phone:input.target.value
+                            })
+                        }}/>
                     </div>
                     <div className="view view2" style={{marginBottom: 2}}>
                         <input className="input" type="text" name={this.state.password} id={this.state.password}
-                               placeholder="输入密码"/>
+                               placeholder="输入密码" onChange={(input) => {
+                            this.setState({
+                                password:input.target.value
+                            })
+                        }}/>
                     </div>
                     <span style={{
                         display: 'block', marginBottom: 10, marginLeft: 22, alignSelf: 'center',
@@ -170,7 +177,11 @@ export default class InviteLoad extends Component {
                         alignItems: 'center'
                     }}>
                         <div style={{width: 140, height: 41, backgroundColor: '#f5f5f5'}}>
-                            <input className="input" type="text" name={this.state.vcode} id=""/>
+                            <input className="input" type="text" name={this.state.vcode} id="" onChange={(input) => {
+                                this.setState({
+                                    vcode:input.target.value
+                                })
+                            }}/>
                         </div>
                         <div style={{width: 20, height: 41, backgroundColor: 'white'}}/>
                         <div style={{
