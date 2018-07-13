@@ -73,8 +73,8 @@ export default class InviteLoad extends Component {
                     getCodeDisable: false
                 });
                 if (body.vcode_type === 'mobile') {
-                    alert('已发送到手机，注意查看短信');
                     this.siv();
+                    alert('已发送到手机，注意查看短信');
                 }
             }, err => {
                 alert(err);
