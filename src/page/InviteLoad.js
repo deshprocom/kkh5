@@ -33,7 +33,7 @@ export default class InviteLoad extends Component {
 
     _select = () => {
         return (
-            <select defaultValue="选择地区" className="input2" style={{width: 260, height: 41, backgroundColor: '#f5f5f5'}}
+            <select defaultValue="选择地区" className="input2" style={{width: 260, height: 41,marginLeft:0,marginRight:0,backgroundColor: '#f5f5f5'}}
                     name={this.state.ext} value={this.state.ext}
                     onChange={(text) => {
                         let value = text.target.value;
@@ -164,10 +164,6 @@ export default class InviteLoad extends Component {
                         })
                     }}>
                         {this._select()}
-                        {/*<input readOnly className="input" type="text" name={this.state.ext} id={this.state.ext}*/}
-                        {/*placeholder="选择地区"/>*/}
-                        {/*<div style={{display: 'flex', flex: 1}}/>*/}
-                        {/*<img style={{width: 13, height: 9, marginRight: 17}} src={Images.bottomarea}/>*/}
                     </div>
 
                     <div className="view view2">
