@@ -3,6 +3,7 @@ import {weiXinShare, checkPhone2, strNotNull, checkPwd,getQueryVariable} from '.
 import '../css/invite.css';
 import {Images} from '../component';
 import {postVCode, postVerifyCode, postRegister} from '../service/InfoDao';
+import md5 from '../config/md5'
 
 export default class InviteLoad extends Component {
     state = {
@@ -105,7 +106,7 @@ export default class InviteLoad extends Component {
 
     _register = () => {
         const {phone, password, vcode, ext, show_select} = this.state;
-        let pwd = hex_md5(password);
+        let pwd = md5.hex_md5(password);
         let body = {
             vcode: vcode,
             password: pwd,
