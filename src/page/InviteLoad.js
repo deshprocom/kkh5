@@ -43,16 +43,16 @@ export default class InviteLoad extends Component {
                     }}>
 
                 <option
-                    value="86">大陆&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;86
+                    value="86">&nbsp;&nbsp;&nbsp;&nbsp;大陆&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;86
                 </option>
                 <option
-                    value="852">香港&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;852
+                    value="852">&nbsp;&nbsp;&nbsp;&nbsp;香港&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;852
                 </option>
                 <option
-                    value="853">澳门&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;853
+                    value="853">&nbsp;&nbsp;&nbsp;&nbsp;澳门&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;853
                 </option>
                 <option
-                    value="886">台湾&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;886
+                    value="886">&nbsp;&nbsp;&nbsp;&nbsp;台湾&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;886
                 </option>
             </select>
         )
@@ -85,7 +85,7 @@ export default class InviteLoad extends Component {
     };
 
     checkVcode = () => {
-        const {phone, password, vcode, ext, show_select} = this.state;
+        const {phone, vcode, ext, show_select} = this.state;
         if (checkPhone2(phone, ext)) {
             let body = {
                 option_type: 'register',
@@ -95,7 +95,7 @@ export default class InviteLoad extends Component {
                 ext: ext
             };
             postVerifyCode(body, (ret) => {
-                return true;
+                this._register()
             }, (err) => {
                 console.log("验证码错误", err);
                 alert(err)
@@ -105,9 +105,10 @@ export default class InviteLoad extends Component {
 
     _register = () => {
         const {phone, password, vcode, ext, show_select} = this.state;
+        let pwd = hex_md5(password);
         let body = {
             vcode: vcode,
-            password: password,
+            password: pwd,
             type: 'mobile',
             mobile: phone,
             ext: ext,
@@ -224,8 +225,8 @@ export default class InviteLoad extends Component {
                         </div>
                     </div>
                     <div className="view complete" onClick={() => {
-                        if (checkPhone2(phone, ext) && checkPwd(password) && this.checkVcode(vcode) ) {
-                            this._register();
+                        if (checkPhone2(phone, ext) && checkPwd(password)) {
+                            this.checkVcode();
                         }
                     }}>
                         <span style={{color: "white", fontSize: 16}}>完成</span>
