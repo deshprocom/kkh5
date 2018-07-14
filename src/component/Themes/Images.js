@@ -7,7 +7,7 @@ const images = {
     is: '/images/is>.png',
     Android: '/images/Android.png',
     iPhone: '/images/iPhone.png',
-    safari: '/images/Safari.png',
+    safari: '/images/safari12.png',
     load_yaoqing: '/images/load_yaoqing.png',
     bottomarea: '/images/bottomarea.png'
 
