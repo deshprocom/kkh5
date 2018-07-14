@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {weiXinShare, checkPhone2, strNotNull, checkPwd,getQueryVariable} from '../service/utils';
+import {weiXinShare, checkPhone2, strNotNull, checkPwd, getQueryVariable} from '../service/utils';
 import '../css/invite.css';
 import {Images} from '../component';
 import {postVCode, postVerifyCode, postRegister} from '../service/InfoDao';
@@ -18,7 +18,7 @@ export default class InviteLoad extends Component {
 
     componentDidMount() {
         document.title = "澳门旅行";
-        console.log("分享用户的ID",getQueryVariable('id'))
+        console.log("分享用户的ID", getQueryVariable('id'))
         //微信二次分享
         const message = {
             title: '【澳门旅行APP】下载立送200元优惠卷',
@@ -34,7 +34,13 @@ export default class InviteLoad extends Component {
 
     _select = () => {
         return (
-            <select defaultValue="选择地区" className="input2" style={{width: 260,height:20, marginLeft:0,paddingRight:17,backgroundColor: '#f5f5f5'}}
+            <select defaultValue="选择地区" className="input2" style={{
+                width: 260,
+                height: 41,
+                marginLeft: 0,
+                marginRight: navigator.userAgent.indexOf('Android') > -1 || navigator.userAgent.indexOf('Adr') > -1 ? 17 : 0,
+                backgroundColor: '#f5f5f5'
+            }}
                     name={this.state.ext} value={this.state.ext}
                     onChange={(text) => {
                         let value = text.target.value;
@@ -131,8 +137,8 @@ export default class InviteLoad extends Component {
         setInterval(() => {
             if (crowdown === 0) {
                 this.setState({getCodeDisable: true})
-            }else{
-                crowdown = crowdown-1;
+            } else {
+                crowdown = crowdown - 1;
                 this.setState({timer: crowdown, getCodeDisable: false});
             }
 
