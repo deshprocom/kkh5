@@ -13,7 +13,8 @@ export default class InviteLoad extends Component {
         ext: '86',
         show_select: false,
         getCodeDisable: true,
-        timer: 60
+        timer: 60,
+        eye_show: false
     };
 
     componentDidMount() {
@@ -148,7 +149,7 @@ export default class InviteLoad extends Component {
 
     render() {
 
-        const {phone, password, vcode, ext, show_select, getCodeDisable, timer} = this.state;
+        const {phone, password, vcode, ext, show_select, getCodeDisable, timer, eye_show} = this.state;
 
         return (
             <div className="invite_page"
@@ -184,12 +185,22 @@ export default class InviteLoad extends Component {
                         }}/>
                     </div>
                     <div className="view view2" style={{marginBottom: 2}}>
-                        <input className="input" type="text" name={this.state.password} id={this.state.password}
+                        <input className="input" type={eye_show ? "text" : "password"} name={this.state.password}
+                               id={this.state.password}
                                placeholder="输入密码" onChange={(input) => {
                             this.setState({
                                 password: input.target.value
                             })
                         }}/>
+                        <div style={{flex: 1}}/>
+                        <div style={{marginRight: 17}} onClick={() => {
+                            this.setState({
+                                eye_show: !this.state.eye_show
+                            })
+                        }}>
+                            <img style={{width: 18, height: 9}}
+                                 src={eye_show ? Images.sign_eye_open : Images.sign_eye}/>
+                        </div>
                     </div>
                     <span style={{
                         display: 'block', marginBottom: 10, marginLeft: 22, alignSelf: 'center',

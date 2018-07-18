@@ -9,7 +9,10 @@ const images = {
     iPhone: '/images/iPhone.png',
     safari: '/images/safari12.png',
     load_yaoqing: '/images/load_yaoqing.png',
-    bottomarea: '/images/bottomarea.png'
+    bottomarea: '/images/bottomarea.png',
+    sign_close_gray: '/images/sign_close_one.png',
+    sign_eye_open: '/images/sign_eye_open.png',
+    sign_eye:'/images/sign_eye.png'
 
 }
 export default images
