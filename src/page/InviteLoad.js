@@ -176,7 +176,7 @@ export default class InviteLoad extends Component {
                     </div>
 
                     <div className="view view2">
-                        <input  className="input" type="text" name={this.state.phone} id={`input${this.state.phone}`}
+                        <input  className="input" type="text" name={this.state.phone} id='input'
                                placeholder="输入手机号" onChange={(input) => {
 
                             this.setState({
@@ -185,8 +185,8 @@ export default class InviteLoad extends Component {
                         }}/>
                     </div>
                     <div className="view view2" style={{marginBottom: 2}}>
-                        <input className="password" type={eye_show ? "text" : "password"} name={this.state.password}
-                               id={`password${this.state.password}`}
+                        <input className="input" type={eye_show ? "text" : "password"} name={this.state.password}
+                               id='password'
                                placeholder="输入密码" onChange={(input) => {
                             this.setState({
                                 password: input.target.value
@@ -215,7 +215,7 @@ export default class InviteLoad extends Component {
                         alignItems: 'center'
                     }}>
                         <div style={{width: 140, height: 41, backgroundColor: '#f5f5f5'}}>
-                            <input className="text" type="text" name={this.state.vcode} id="" onChange={(input) => {
+                            <input className="input" type="text" name={this.state.vcode} id="" onChange={(input) => {
                                 this.setState({
                                     vcode: input.target.value
                                 })
