@@ -2,14 +2,29 @@ import React, {Component} from 'react';
 import {weiXinShare} from '../service/utils';
 import '../css/Download.css';
 import {Images} from '../component';
+import {getUpdate} from '../service/InfoDao'
 
 export default class LoadApp extends Component {
     state = {
         show: false,
-        showAndroid: false
+        showAndroid: false,
+        ios_version: '',
+        android_version: ''
     };
 
     componentDidMount() {
+        getUpdate(data => {
+            const {android_platform, ios_platform} = data;
+            console.log("更新提示", data)
+            this.setState({
+                ios_version: ios_platform.version,
+                android_version: android_platform.version
+            })
+
+        }, err => {
+            console.log("err", err)
+        });
+
         document.title = "澳门旅行";
         //微信二次分享
         const message = {
@@ -32,7 +47,7 @@ export default class LoadApp extends Component {
 
     };
     toAndroidApp = () => {
-        window.open('http://cdn-upyun.deshpro.com/deshpro_public/macauhike.apk');
+        window.open(`http://cdn-upyun.deshpro.com/deshpro_public/macauhike.apk?version=${this.state.android_version}`);
         this.setState({
             showAndroid: true
         });
@@ -41,7 +56,7 @@ export default class LoadApp extends Component {
 
     render() {
         return (
-            <div style={{display: 'flex', flex: 1, width: '100%',backgroundColor:'#F3F3F3'}}>
+            <div style={{display: 'flex', flex: 1, width: '100%', backgroundColor: '#F3F3F3'}}>
                 {this.state.showAndroid ?
                     <img style={{width: '90%', height: 100, alignSelf: 'center'}} src={Images.safari} alt=""/> : null}
                 <div className="Download" style={this.state.showAndroid ? {marginTop: 100} : null}>

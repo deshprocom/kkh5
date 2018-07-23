@@ -20,7 +20,8 @@ export default {
     weixin_js_sign: 'weixin/js_sign',
     v_codes: 'account/v_codes',
     account_verify: 'account/verify_vcode',
-    register: 'account/register'
+    register: 'account/register',
+    app_versions: 'app_versions'
 }
 
 

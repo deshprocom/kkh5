@@ -11,6 +11,12 @@ import api from '../config/api';
 import {get,post} from '../config/fetch'
 
 
+export function getUpdate(resolve, reject) {
+    get(api.app_versions, ret => {
+        resolve(ret.data)
+    }, reject)
+}
+
 /*注册*/
 export function postRegister(body, resolve, reject) {
     post(api.register, body, (ret) => {
