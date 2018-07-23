@@ -82,7 +82,7 @@ export default class InviteLoad extends Component {
                 });
                 if (body.vcode_type === 'mobile') {
                     this.siv();
-                    alert('已发送到手机，注意查看短信');
+                    // alert('已发送到手机，注意查看短信');
                 }
             }, err => {
                 alert(err);
