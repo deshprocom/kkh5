@@ -56,7 +56,7 @@ export default class LoadApp extends Component {
 
     render() {
         return (
-            <div style={{display: 'flex', flex: 1, width: '100%', backgroundColor: '#F3F3F3'}}>
+            <div style={{display: 'flex', flex: 1, width: '100%', backgroundColor: '#686868'}}>
                 {this.state.showAndroid ?
                     <img style={{width: '90%', height: 100, alignSelf: 'center'}} src={Images.safari} alt=""/> : null}
                 <div className="Download" style={this.state.showAndroid ? {marginTop: 100} : null}>

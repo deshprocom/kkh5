@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0a462c0f-f436-4bac-94a8-55b5f3c75700" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/config/api.js" afterPath="$PROJECT_DIR$/src/config/api.js" />
       <change beforePath="$PROJECT_DIR$/src/page/LoadApp.js" afterPath="$PROJECT_DIR$/src/page/LoadApp.js" />
-      <change beforePath="$PROJECT_DIR$/src/service/InfoDao.js" afterPath="$PROJECT_DIR$/src/service/InfoDao.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,7 +23,7 @@
       <file leaf-file-name="InviteLoad.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/page/InviteLoad.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
+            <state relative-caret-position="986">
               <caret line="63" column="2" lean-forward="false" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="2" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -38,7 +36,7 @@
       <file leaf-file-name="md5.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/config/md5.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
+            <state relative-caret-position="425">
               <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -57,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadApp.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoadApp.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/page/LoadApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="51" column="29" lean-forward="true" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -92,7 +90,7 @@
       <file leaf-file-name="fetch.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/config/fetch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="306">
               <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
               <folding>
                 <element signature="e#110#186#0" expanded="true" />
@@ -101,14 +99,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Route.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Route.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/config/Route.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-              <folding>
-                <element signature="e#111#136#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -241,8 +237,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="432" />
-    <option name="y" value="24" />
+    <option name="x" value="558" />
+    <option name="y" value="23" />
     <option name="width" value="1586" />
     <option name="height" value="971" />
   </component>
@@ -264,8 +260,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -300,6 +294,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -378,7 +374,9 @@
       <workItem from="1532311980486" duration="1375000" />
       <workItem from="1532319659279" duration="84000" />
       <workItem from="1532332936310" duration="23000" />
-      <workItem from="1532333347543" duration="2263000" />
+      <workItem from="1532333347543" duration="2588000" />
+      <workItem from="1532406240351" duration="29000" />
+      <workItem from="1532662405083" duration="181000" />
     </task>
     <task id="LOCAL-00001" summary="错误日志">
       <created>1529381386805</created>
@@ -716,14 +714,21 @@
       <option name="project" value="LOCAL" />
       <updated>1532318471760</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="233">
+      <created>1532336531272</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1532336531272</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106762000" />
+    <option name="totallyTimeSpent" value="107297000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="432" y="24" width="1586" height="971" extended-state="0" />
+    <frame x="558" y="23" width="1586" height="971" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20319489" sideWeight="0.49430895" order="0" side_tool="false" content_ui="combo" />
@@ -1050,7 +1055,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/config/md5.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
+        <state relative-caret-position="425">
           <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -1068,7 +1073,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/config/fetch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="306">
           <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
           <folding>
             <element signature="e#110#186#0" expanded="true" />
@@ -1086,21 +1091,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/page/InviteLoad.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
+        <state relative-caret-position="986">
           <caret line="63" column="2" lean-forward="false" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="2" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <marker date="1532318376000" expanded="false" signature="10030:10038" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/LoadApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1123,10 +1118,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/config/Route.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+        <state relative-caret-position="153">
+          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/LoadApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="51" column="29" lean-forward="true" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
           <folding>
-            <element signature="e#111#136#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
