@@ -47,19 +47,28 @@ export default class LoadApp extends Component {
 
     };
     toAndroidApp = () => {
-        window.open(`http://cdn-upyun.deshpro.com/deshpro_public/macauhike.apk?version=${this.state.android_version}`);
-        this.setState({
-            showAndroid: true
-        });
+        let plat = navigator.userAgent;
+        if(plat.indexOf('Android') > -1 || plat.indexOf('Adr') > -1){
+            window.open(`http://cdn-upyun.deshpro.com/deshpro_public/macauhike.apk?version=${this.state.android_version}`);
+            let ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                this.setState({
+                    showAndroid: true
+                });
+            }
+        }
+
     };
 
 
     render() {
         return (
-            <div style={{display: 'flex', flex: 1, width: '100%', backgroundColor: '#686868'}}>
-                {this.state.showAndroid ?
-                    <img style={{width: '90%', height: 100, alignSelf: 'center'}} src={Images.safari} alt=""/> : null}
-                <div className="Download" style={this.state.showAndroid ? {marginTop: 100} : null}>
+            <div style={{display: 'flex',flexDirection:'column',alignItems:'center', width: '100%'}}>
+                {this.state.showAndroid ? <div style={{width:'100%',height:70,display:'flex',flexDirection:'row-reverse',backgroundColor: '#444444'}}>
+                    <img style={{width: '70%', height: 70,marginRight: 23}} src={Images.safari} alt=""/>
+                </div> : null}
+
+                <div className="Download" style={this.state.showAndroid ? {marginTop: 70} : null}>
                     <div className="black">
                     </div>
                     <a className="ios_app_a" onClick={this.toIosApp}>
