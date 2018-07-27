@@ -28,7 +28,7 @@ export default class LoadApp extends Component {
         document.title = "澳门旅行";
         //微信二次分享
         const message = {
-            title: '【澳门旅行APP】下载立送200元优惠卷',
+            title: '【澳门旅行APP】下载立送200元优惠券',
             desc: '在这里，可以随时随地找美食、定酒店！还有家庭旅行订制化服务等你体验！',//分享描述
             link: window.location.href, // 分享链接，该链接域名必须与当前企业的可信域名一致
             imgUrl: Images.default_img, // 分享图标
