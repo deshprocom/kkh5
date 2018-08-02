@@ -8,8 +8,14 @@
  */
 
 import api from '../config/api';
-import {get,post} from '../config/fetch'
+import {get, post} from '../config/fetch'
 
+
+export function getInfos(body, resolve, reject) {
+    get(api.infos(body.id), {},ret => {
+        resolve(ret.data)
+    }, reject)
+}
 
 export function getUpdate(resolve, reject) {
     get(api.app_versions, ret => {
@@ -28,7 +34,7 @@ export function postRegister(body, resolve, reject) {
 
 /*检验验证码是否正确*/
 export function postVerifyCode(body, resolve, reject) {
-   post(api.account_verify, body, resolve, reject);
+    post(api.account_verify, body, resolve, reject);
 }
 
 
@@ -40,14 +46,14 @@ export function postVCode(body, resolve, reject) {
 
 export function recommends(resolve, reject) {
 
-    get(api.recommends, {page:0,page_size:20}, data => {
+    get(api.recommends, {page: 0, page_size: 20}, data => {
         resolve(data)
     }, reject)
 }
 
 
-export function getProductDetail(body,resolve, reject) {
-    get(api.products(body.product_id), {},  ret => {
+export function getProductDetail(body, resolve, reject) {
+    get(api.products(body.product_id), {}, ret => {
         resolve(ret.data);
     }, reject);
 }

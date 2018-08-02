@@ -21,10 +21,15 @@ export default {
     v_codes: 'account/v_codes',
     account_verify: 'account/verify_vcode',
     register: 'account/register',
-    app_versions: 'app_versions'
+    app_versions: 'app_versions',
+    infos: infos,//获取资讯详情
 }
 
 
 function products(id) {
     return `shop/products/${id}`
+}
+
+function infos(id) {
+    return `infos/${id}`
 }
