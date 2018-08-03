@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a462c0f-f436-4bac-94a8-55b5f3c75700" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/croup_receive.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/css/info.css" />
+    <list default="true" id="0a462c0f-f436-4bac-94a8-55b5f3c75700" name="Default" comment="音乐播放">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/component/Themes/Images.js" afterPath="$PROJECT_DIR$/src/component/Themes/Images.js" />
       <change beforePath="$PROJECT_DIR$/src/page/InfoPage.js" afterPath="$PROJECT_DIR$/src/page/InfoPage.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,8 +23,8 @@
       <file leaf-file-name="InfoPage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/page/InfoPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="53" column="35" lean-forward="true" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+            <state relative-caret-position="107">
+              <caret line="87" column="24" lean-forward="true" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -406,14 +403,7 @@
       <workItem from="1533182128407" duration="538000" />
       <workItem from="1533183458244" duration="2851000" />
       <workItem from="1533269826863" duration="841000" />
-      <workItem from="1533279978473" duration="4406000" />
-    </task>
-    <task id="LOCAL-00005" summary="商品详情&#10;通信 未完成">
-      <created>1529494738136</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1529494738136</updated>
+      <workItem from="1533279978473" duration="4628000" />
     </task>
     <task id="LOCAL-00006" summary="商品详情&#10;通信 已完成">
       <created>1529549445725</created>
@@ -751,11 +741,18 @@
       <option name="project" value="LOCAL" />
       <updated>1533201839772</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="音乐播放">
+      <created>1533284538168</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1533284538168</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120168000" />
+    <option name="totallyTimeSpent" value="120390000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="259" y="23" width="1586" height="971" extended-state="0" />
@@ -821,7 +818,8 @@
     <MESSAGE value="密码加密" />
     <MESSAGE value="233" />
     <MESSAGE value="详情页面和接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="详情页面和接口" />
+    <MESSAGE value="音乐播放" />
+    <option name="LAST_COMMIT_MESSAGE" value="音乐播放" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1155,8 +1153,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/page/InfoPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="53" column="35" lean-forward="true" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+        <state relative-caret-position="107">
+          <caret line="87" column="24" lean-forward="true" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
