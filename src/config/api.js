@@ -23,6 +23,7 @@ export default {
     register: 'account/register',
     app_versions: 'app_versions',
     infos: infos,//获取资讯详情
+    topics_detail:topics_detail
 }
 
 
@@ -32,4 +33,8 @@ function products(id) {
 
 function infos(id) {
     return `infos/${id}`
+}
+
+function topics_detail(topic_id) {
+    return `topics/${topic_id}`
 }

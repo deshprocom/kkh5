@@ -19,6 +19,7 @@ import MallInfoPage from '../page/mall/MallInfoPage';
 import LoadApp from '../page/LoadApp';
 import InviteLoad from '../page/InviteLoad';
 import InfoPage from '../page/InfoPage';
+import ArticlePage from "../page/ArticlePage";
 
 const RouteConfig = () => (
     <Router>
@@ -29,6 +30,7 @@ const RouteConfig = () => (
                 <Route path={'/loadApp'} component={LoadApp}/>
                 <Route path={'/invite_load'} component={InviteLoad}/>
                 <Route path={'/infos/:id'} component={InfoPage}/>
+                <Route path={'/topics/:id'} component={ArticlePage}/>
             </Switch>
         </App>
     </Router>

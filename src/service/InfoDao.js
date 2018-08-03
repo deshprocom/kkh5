@@ -11,8 +11,16 @@ import api from '../config/api';
 import {get, post} from '../config/fetch'
 
 
+export function topics_details(topic_id, resolve, reject) {
+    get(api.topics_detail(topic_id), {}, ret => {
+        resolve(ret.data)
+    }, err => {
+        reject(err)
+    })
+}
+
 export function getInfos(body, resolve, reject) {
-    get(api.infos(body.id), {},ret => {
+    get(api.infos(body.id), {}, ret => {
         resolve(ret.data)
     }, reject)
 }
