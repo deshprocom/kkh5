@@ -135,7 +135,7 @@ export default class InfoPage extends Component {
                         <img
                             src="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/appmsg/qqmusic/icon_qqmusic_default.2x26f1f1.png"
                             alt="" className="pic_qqmusic_default"/>
-                        <img src={Images.default_img}
+                        <img src={image}
                              data-autourl="http://fs.open.kugou.com/fcdae995f3dc8e0ba071a55c5514fdec/5b6004b9/G050/M05/13/07/0oYBAFb07cmAe7xdADEVEatVgrM250.mp3"
                              data-musicid="20899231" className="qqmusic_thumb" alt=""/>
                         <audio id="music_play" src='http://go.163.com/2018/0209/mengniu/audio/bgm.mp3'>
