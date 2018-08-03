@@ -12,7 +12,8 @@ const images = {
     bottomarea: '/images/bottomarea.png',
     sign_close_gray: '/images/sign_close_one.png',
     sign_eye_open: '/images/sign_eye_open.png',
-    sign_eye:'/images/sign_eye.png'
+    sign_eye:'/images/sign_eye.png',
+    croup_receive:'/images/croup_receive.png'
 
 }
 export default images

@@ -1,0 +1,23 @@
+
+.pic_qqmusic_default {
+    position: absolute;
+    width: 37px;
+    height: 37px;
+}
+.qqmusic_thumb {
+    display: block;
+    width: 60px;
+    height: 60px !important;
+}
+.qqmusic_area {
+    display: block;
+    margin: 17px 1px 16px 0;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 0;
+    line-height: 0;
+    text-align: left;
+    -ms-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
