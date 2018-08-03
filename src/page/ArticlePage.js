@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {MarkDown, Colors, Images} from '../component';
 import {strNotNull, weiXinShare, isEmptyObject, getDateDiff} from "../service/utils";
 import {
-    topics_details
+    topics_details, topics_comments
 } from '../service/InfoDao';
 
 export default class ArticlePage extends Component {
@@ -10,7 +10,8 @@ export default class ArticlePage extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            article: {}
+            article: {},
+            comments: []
         };
     }
 
@@ -37,6 +38,14 @@ export default class ArticlePage extends Component {
             weiXinShare(url, message);
         }, err => {
         });
+
+        topics_comments({page: 1, page_size: 20, target_id: id, target_type: 'topic'}, data => {
+            console.log("comments", data);
+            this.setState({
+                comments: data.items
+            })
+        }, err => {
+        })
     };
 
     render() {
@@ -44,14 +53,15 @@ export default class ArticlePage extends Component {
         if (isEmptyObject(article)) {
             return <div/>
         }
-        const {id, total_likes, title, user, cover_link, current_user_liked, body, body_type, official, recommended, total_comments, total_views} = article;
+        const {id, images, total_likes, title, user, cover_link, current_user_liked, body, body_type, official, recommended, total_comments, total_views} = article;
         const {avatar, created_at, followers_count, following_count, nick_name, signature, user_id} = user;
+        const {comments} = this.state;
         return (
             <div style={styles.content}>
                 <div style={styles.top}>
                     <img style={styles.c_avatar} src={avatar}/>
 
-                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginLeft: 10}}>
+                    <div style={{display: 'flex', flexDirection: 'column', marginLeft: 10}}>
                         <div style={{display: 'flex', flexDirection: 'row'}}>
                             <span style={styles.c_nick}>{nick_name}</span>
                             {official ? <span style={[styles.c_tag, {
@@ -84,7 +94,11 @@ export default class ArticlePage extends Component {
                     <img style={styles.like} src={Images.like_gray}/>
                     <span style={styles.time}>&nbsp;{`(${total_likes})`}</span>
                 </div>
-                <div style={{marginTop:10,width:'100%',height:1.5,backgroundColor:'#F3F3F3'}}/>
+                <div style={{marginTop: 10, width: '100%', height: 1.5, backgroundColor: '#F3F3F3'}}/>
+
+                {total_comments > 0 ? <div>
+
+                </div> : null}
             </div>
         )
     }
@@ -129,8 +143,9 @@ const styles = {
     c_body: {
         fontSize: 16,
         color: Colors.txt_444,
-        marginLeft: 54,
-        marginTop: 6
+        marginLeft: 17,
+        display: 'block',
+        marginTop: 10
     },
     comment: {
         fontSize: 14,
