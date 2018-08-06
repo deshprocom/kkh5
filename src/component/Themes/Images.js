@@ -14,7 +14,9 @@ const images = {
     sign_eye_open: '/images/sign_eye_open.png',
     sign_eye:'/images/sign_eye.png',
     croup_receive:'/images/croup_receive.png',
-    like_gray : '/images/like_gray.png'
+    like_gray : '/images/like_gray.png',
+    home_avatar:'/images/home_avatar.png',
+    reply:'/images/reply.png'
 
 }
 export default images

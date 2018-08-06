@@ -48,6 +48,14 @@ export default class ArticlePage extends Component {
         })
     };
 
+    set_avatar = (avatar) => {
+        if (strNotNull(avatar)) {
+            return avatar;
+        } else {
+            return Images.home_avatar
+        }
+    }
+
     render() {
         const {article} = this.state;
         if (isEmptyObject(article)) {
@@ -59,7 +67,7 @@ export default class ArticlePage extends Component {
         return (
             <div style={styles.content}>
                 <div style={styles.top}>
-                    <img style={styles.c_avatar} src={avatar}/>
+                    <img style={styles.c_avatar} src={this.set_avatar(avatar)}/>
 
                     <div style={{display: 'flex', flexDirection: 'column', marginLeft: 10}}>
                         <div style={{display: 'flex', flexDirection: 'row'}}>
@@ -97,7 +105,55 @@ export default class ArticlePage extends Component {
                 <div style={{marginTop: 10, width: '100%', height: 1.5, backgroundColor: '#F3F3F3'}}/>
 
                 {total_comments > 0 ? <div>
-                    
+                    {comments.map((item, index) => {
+                        const {user} = item;
+                        return (
+                            <div style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                marginLeft: 17,
+                                borderBottomWidth: 1,
+                                borderBottomColor: '#F3F3F3'
+                            }}
+                                 key={`commtens+${index}`}>
+                                <div style={{marginTop: 17, display: 'flex', marginRight: 17, flexDirection: 'row'}}>
+                                    <img style={styles.c_avatar} src={this.set_avatar(user.avatar)}/>
+
+                                    <div style={{display: 'flex', flexDirection: 'column', marginLeft: 8}}>
+                                        <div style={{display: 'flex', flexDirection: 'row'}}>
+                                            <span style={styles.c_nick}>{user.nick_name}</span>
+                                            {official ? <span style={[styles.c_tag, {
+                                                backgroundColor: '#161718',
+                                                color: '#FFE9AD'
+                                            }]}>官方</span> : null}
+
+                                            {recommended ? <span style={[styles.c_tag, {
+                                                backgroundColor: '#161718',
+                                                color: '#FFE9AD'
+                                            }]}>精选</span> : null}
+                                        </div>
+                                        <span style={styles.c_time}>{getDateDiff(user.created_at)}</span>
+                                    </div>
+
+                                    <div style={{flex:1}}/>
+                                    <img style={{height: 18,width: 20}} onClick={()=>{
+                                        this.props.history.push("/loadApp");
+                                    }} src={Images.reply}/>
+                                </div>
+                                <span style={styles.c_body}>
+                                        {item.body}
+                                </span>
+
+                                {strNotNull(item.total_replies) && item.total_replies > 0 ? <div style={styles.replies} onClick={()=>{
+                                    this.props.history.push("/loadApp");
+                                }}>
+                                    <text style={styles.c_nick2}>查看{item.total_replies}条回复</text>
+                                </div> : null}
+                                <div style={{marginTop: 10, width: '100%', height: 1.5, backgroundColor: '#F3F3F3'}}/>
+                            </div>
+
+                        )
+                    })}
                 </div> : null}
             </div>
         )
@@ -107,6 +163,21 @@ export default class ArticlePage extends Component {
 }
 
 const styles = {
+    c_nick2: {
+        display:'block',
+        color: '#4A90E2',
+        fontSize: 12,
+        marginLeft: 6
+    },
+    replies:{
+        height: 20,
+        backgroundColor: '#ECECEE',
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginLeft: 15,
+        marginTop: 8,
+        marginRight:17
+    },
     like: {
         height: 15,
         width: 15,
