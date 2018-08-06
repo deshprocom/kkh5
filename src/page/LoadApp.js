@@ -75,7 +75,7 @@ export default class LoadApp extends Component {
                         <img className="iosDownloadImg" src={Images.iPhone} alt=""/>
                     </a>
 
-                    <a className="android_app_a" onClick={this.toAndroidApp}>
+                    <a className="android_app_a" onClick={this.toAndroidApp} target="_blank">
                         <img className="andoridDownloadImg" src={Images.Android} alt=""/>
                     </a>
 

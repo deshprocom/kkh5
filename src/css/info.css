@@ -3,6 +3,8 @@
     position: absolute;
     width: 37px;
     height: 37px;
+    top:12px;
+    left:12px;
 }
 .qqmusic_thumb {
     display: block;
