@@ -71,7 +71,7 @@ export default class ArticlePage extends Component {
 
                     <div style={{display: 'flex', flexDirection: 'column', marginLeft: 10}}>
                         <div style={{display: 'flex', flexDirection: 'row'}}>
-                            <span style={styles.c_nick}>{nick_name}</span>
+                            <span style={{fontSize: 12,color:'#444444'}}>{nick_name}</span>
                             {official ? <span style={[styles.c_tag, {
                                 backgroundColor: '#161718',
                                 color: '#FFE9AD'
