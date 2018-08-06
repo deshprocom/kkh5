@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a462c0f-f436-4bac-94a8-55b5f3c75700" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/home_avatar.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/reply.png" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/component/Themes/Images.js" afterPath="$PROJECT_DIR$/src/component/Themes/Images.js" />
       <change beforePath="$PROJECT_DIR$/src/page/ArticlePage.js" afterPath="$PROJECT_DIR$/src/page/ArticlePage.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -48,8 +45,8 @@
       <file leaf-file-name="ArticlePage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/page/ArticlePage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="178" column="22" lean-forward="false" selection-start-line="178" selection-start-column="22" selection-end-line="178" selection-end-column="22" />
+            <state relative-caret-position="253">
+              <caret line="141" column="38" lean-forward="true" selection-start-line="141" selection-start-column="38" selection-end-line="141" selection-end-column="38" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -404,14 +401,7 @@
       <workItem from="1533183458244" duration="2851000" />
       <workItem from="1533269826863" duration="841000" />
       <workItem from="1533279978473" duration="10237000" />
-      <workItem from="1533522612291" duration="2856000" />
-    </task>
-    <task id="LOCAL-00011" summary="下载页面">
-      <created>1529647705806</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1529647705806</updated>
+      <workItem from="1533522612291" duration="2883000" />
     </task>
     <task id="LOCAL-00012" summary="下载页面">
       <created>1529657731983</created>
@@ -749,11 +739,18 @@
       <option name="project" value="LOCAL" />
       <updated>1533522855851</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="说说长帖H5">
+      <created>1533527507829</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1533527507829</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128855000" />
+    <option name="totallyTimeSpent" value="128882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="406" y="24" width="1586" height="971" extended-state="0" />
@@ -820,9 +817,9 @@
     <MESSAGE value="233" />
     <MESSAGE value="详情页面和接口" />
     <MESSAGE value="音乐播放" />
-    <MESSAGE value="说说长帖H5" />
     <MESSAGE value="去掉手机号码验证" />
-    <option name="LAST_COMMIT_MESSAGE" value="去掉手机号码验证" />
+    <MESSAGE value="说说长帖H5" />
+    <option name="LAST_COMMIT_MESSAGE" value="说说长帖H5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1156,8 +1153,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/page/ArticlePage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="178" column="22" lean-forward="false" selection-start-line="178" selection-start-column="22" selection-end-line="178" selection-end-column="22" />
+        <state relative-caret-position="253">
+          <caret line="141" column="38" lean-forward="true" selection-start-line="141" selection-start-column="38" selection-end-line="141" selection-end-column="38" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

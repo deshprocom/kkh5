@@ -147,7 +147,7 @@ export default class ArticlePage extends Component {
                                 {strNotNull(item.total_replies) && item.total_replies > 0 ? <div style={styles.replies} onClick={()=>{
                                     this.props.history.push("/loadApp");
                                 }}>
-                                    <text style={styles.c_nick2}>查看{item.total_replies}条回复</text>
+                                    <span style={styles.c_nick2}>查看{item.total_replies}条回复</span>
                                 </div> : null}
                                 <div style={{marginTop: 10, width: '100%', height: 1.5, backgroundColor: '#F3F3F3'}}/>
                             </div>
