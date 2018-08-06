@@ -45,8 +45,8 @@
       <file leaf-file-name="ArticlePage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/page/ArticlePage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="141" column="38" lean-forward="true" selection-start-line="141" selection-start-column="38" selection-end-line="141" selection-end-column="38" />
+            <state relative-caret-position="243">
+              <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -401,14 +401,7 @@
       <workItem from="1533183458244" duration="2851000" />
       <workItem from="1533269826863" duration="841000" />
       <workItem from="1533279978473" duration="10237000" />
-      <workItem from="1533522612291" duration="2883000" />
-    </task>
-    <task id="LOCAL-00012" summary="下载页面">
-      <created>1529657731983</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1529657731983</updated>
+      <workItem from="1533522612291" duration="2930000" />
     </task>
     <task id="LOCAL-00013" summary="下载页面">
       <created>1529661763464</created>
@@ -746,11 +739,18 @@
       <option name="project" value="LOCAL" />
       <updated>1533527507829</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="说说长帖H5">
+      <created>1533527529657</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1533527529657</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128882000" />
+    <option name="totallyTimeSpent" value="128929000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="406" y="24" width="1586" height="971" extended-state="0" />
@@ -1153,8 +1153,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/page/ArticlePage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="141" column="38" lean-forward="true" selection-start-line="141" selection-start-column="38" selection-end-line="141" selection-end-column="38" />
+        <state relative-caret-position="243">
+          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

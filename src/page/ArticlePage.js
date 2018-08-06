@@ -22,7 +22,7 @@ export default class ArticlePage extends Component {
             this.setState({
                 article: data
             })
-            const {cover_link, body_type, image} = data;
+            const {cover_link, body_type, image,title} = data;
             document.title = body_type === 'short' ? '说说' : '长帖';
 
             const message = {
