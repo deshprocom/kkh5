@@ -97,7 +97,7 @@ export default class ArticlePage extends Component {
                 <div style={{marginTop: 10, width: '100%', height: 1.5, backgroundColor: '#F3F3F3'}}/>
 
                 {total_comments > 0 ? <div>
-
+                    
                 </div> : null}
             </div>
         )

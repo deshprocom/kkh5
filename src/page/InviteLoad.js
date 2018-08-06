@@ -68,7 +68,7 @@ export default class InviteLoad extends Component {
 
     _sendCode = () => {
         const {phone, ext} = this.state;
-        if (checkPhone2(phone, ext) && strNotNull(ext)) {
+        if (strNotNull(ext)) {
             const body = {
                 option_type: 'register',
                 vcode_type: 'mobile',
@@ -94,21 +94,19 @@ export default class InviteLoad extends Component {
 
     checkVcode = () => {
         const {phone, vcode, ext, show_select} = this.state;
-        if (checkPhone2(phone, ext)) {
-            let body = {
-                option_type: 'register',
-                vcode_type: 'mobile',
-                account: phone,
-                vcode: vcode,
-                ext: ext
-            };
-            postVerifyCode(body, (ret) => {
-                this._register()
-            }, (err) => {
-                console.log("验证码错误", err);
-                alert(err)
-            })
-        }
+        let body = {
+            option_type: 'register',
+            vcode_type: 'mobile',
+            account: phone,
+            vcode: vcode,
+            ext: ext
+        };
+        postVerifyCode(body, (ret) => {
+            this._register()
+        }, (err) => {
+            console.log("验证码错误", err);
+            alert(err)
+        })
     };
 
     _register = () => {
@@ -231,7 +229,7 @@ export default class InviteLoad extends Component {
                             justifyContent: 'center',
                             borderRadius: 3
                         }} onClick={() => {
-                            if (checkPhone2(phone, ext) && getCodeDisable) {
+                            if (getCodeDisable) {
                                 this._sendCode();
                             }
                         }}>
@@ -243,7 +241,7 @@ export default class InviteLoad extends Component {
                         </div>
                     </div>
                     <div className="view complete" onClick={() => {
-                        if (checkPhone2(phone, ext) && checkPwd(password)) {
+                        if (checkPwd(password)) {
                             this.checkVcode();
                         }
                     }}>
