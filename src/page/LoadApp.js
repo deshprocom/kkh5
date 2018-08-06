@@ -48,24 +48,41 @@ export default class LoadApp extends Component {
     };
     toAndroidApp = () => {
         let plat = navigator.userAgent;
-        if(plat.indexOf('Android') > -1 || plat.indexOf('Adr') > -1){
-            window.open(`http://cdn-upyun.deshpro.com/deshpro_public/macauhike.apk?version=${this.state.android_version}`);
+        if (plat.indexOf('Android') > -1 || plat.indexOf('Adr') > -1) {
             let ua = navigator.userAgent.toLowerCase();
             if (ua.match(/MicroMessenger/i) == "micromessenger") {
                 this.setState({
                     showAndroid: true
                 });
+            } else {
+
+                this.open_android(`http://cdn-upyun.deshpro.com/deshpro_public/macauhike.apk?version=${this.state.android_version}`);
             }
+
+
         }
 
     };
 
+    open_android=(url)=>{
+        let a = document.getElementById("android_load");
+        a.setAttribute("href", url);
+        a.setAttribute("target", "_blank");
+        a.click();
+    }
+
 
     render() {
         return (
-            <div style={{display: 'flex',flexDirection:'column',alignItems:'center', width: '100%'}}>
-                {this.state.showAndroid ? <div style={{width:'100%',height:70,display:'flex',flexDirection:'row-reverse',backgroundColor: '#444444'}}>
-                    <img style={{width: '70%', height: 70,marginRight: 23}} src={Images.safari} alt=""/>
+            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%'}}>
+                {this.state.showAndroid ? <div style={{
+                    width: '100%',
+                    height: 70,
+                    display: 'flex',
+                    flexDirection: 'row-reverse',
+                    backgroundColor: '#444444'
+                }}>
+                    <img style={{width: '70%', height: 70, marginRight: 23}} src={Images.safari} alt=""/>
                 </div> : null}
 
                 <div className="Download" style={this.state.showAndroid ? {marginTop: 70} : null}>
@@ -75,7 +92,7 @@ export default class LoadApp extends Component {
                         <img className="iosDownloadImg" src={Images.iPhone} alt=""/>
                     </a>
 
-                    <a className="android_app_a" onClick={this.toAndroidApp} target="_blank">
+                    <a id='android_load' className="android_app_a" onClick={this.toAndroidApp}>
                         <img className="andoridDownloadImg" src={Images.Android} alt=""/>
                     </a>
 
