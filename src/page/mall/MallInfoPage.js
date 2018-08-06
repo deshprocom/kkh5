@@ -96,7 +96,7 @@ export default class MallInfoPage extends Component {
                 <div style={styles.container}>
 
                     {this.state.showTip?<Tip clickTip={this._clickTip} history={this.props.history}/>:null}
-                    <div style={{width:'100%',height:362}}>
+                    <div style={{width:'100%',height:362,marginBottom:10}}>
                         <ProductBanner banners={images}/>
                     </div>
 

@@ -5,6 +5,7 @@
 
 .introduceGame p img {
     width: 100% !important;
+    height:100%;
     margin-top: 10px;
 }
 
