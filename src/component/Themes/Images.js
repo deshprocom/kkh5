@@ -16,7 +16,8 @@ const images = {
     croup_receive:'/images/croup_receive.png',
     like_gray : '/images/like_gray.png',
     home_avatar:'/images/home_avatar.png',
-    reply:'/images/reply.png'
-
+    reply:'/images/reply.png',
+    bg_music:'/images/bg_music.png',
+    bg_music_close:'/images/bg_music_close.png'
 }
 export default images

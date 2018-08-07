@@ -2,18 +2,27 @@ import React, {Component} from 'react';
 import {MarkDown, Colors, Images} from '../component';
 import {strNotNull, weiXinShare, isEmptyObject} from "../service/utils";
 import {getInfos} from '../service/InfoDao';
-import '../css/info.css'
+import '../css/info.css';
+
+let audio = null;
 
 export default class InfoPage extends Component {
 
     constructor(props) {
         super(props)
         this.state = {
-            info: {}
+            info: {},
+            music: true,
+
         };
+        // this.musicPlay = React.createRef();
     }
 
     componentDidMount() {
+
+        // audio = document.getElementById('musicPlay');
+
+
         const {id} = this.props.match.params;
 
         getInfos({id: id}, data => {
@@ -36,21 +45,25 @@ export default class InfoPage extends Component {
             const url = {url: window.location.href};
             console.log("message:", message);
             weiXinShare(url, message);
+
+            setTimeout(() => {
+                audio = this.musicPlay;
+                this._audio()
+            }, 1000)
+
+
         }, err => {
 
         });
 
-        this._audio()
 
     };
 
-    _audio=()=>{
+    _audio = () => {
         const that = this;
-        let audio = document.getElementById("\bmusic_play");
-        console.log("dshjds",audio)
-        if(sessionStorage.bgmusic === 'pause'){
+        if (sessionStorage.bgmusic === 'pause') {
             this.playBgMusic(false);
-        }else{
+        } else {
             this.playBgMusic(true);
             //----------处理自动播放------------
             //--创建页面监听，等待微信端页面加载完毕 触发音频播放
@@ -71,12 +84,12 @@ export default class InfoPage extends Component {
                 'mozHidden' in document ? 'mozHidden' :
                     null;
         let visibilityChangeEvent = hiddenProperty.replace(/hidden/i, 'visibilitychange');
-        let onVisibilityChange = function(){
+        let onVisibilityChange = function () {
             if (!document[hiddenProperty]) {
-                if(!sessionStorage.bgmusic||sessionStorage.bgmusic ==='play'){
+                if (!sessionStorage.bgmusic || sessionStorage.bgmusic === 'play') {
                     audio.play();
                 }
-            }else{
+            } else {
                 audio.pause();
             }
         };
@@ -85,67 +98,58 @@ export default class InfoPage extends Component {
 
     };
 
-    audioAutoPlay=()=> {
+    audioAutoPlay = () => {
         this.playBgMusic(true);
-        document.removeEventListener('touchstart',this.audioAutoPlay);
+        document.removeEventListener('touchstart', this.audioAutoPlay);
     };
 
-    playBgMusic=(val)=>{
-        let audio = document.getElementById("\bmusic_play");
-        if(val){
+    playBgMusic = (val) => {
+        if (val) {
             audio.play();
-            sessionStorage.bgmusic='play';
-        }else{
+            sessionStorage.bgmusic = 'play';
+        } else {
             audio.pause();
-            sessionStorage.bgmusic='pause';
+            sessionStorage.bgmusic = 'pause';
         }
     }
 
-    triggerBgMusic=()=>{
-        if(!sessionStorage.bgmusic||sessionStorage.bgmusic ==='play'){
+    triggerBgMusic = () => {
+        if (!sessionStorage.bgmusic || sessionStorage.bgmusic === 'play') {
             this.playBgMusic(false);
-        }else{
+        } else {
             this.playBgMusic(true);
         }
     }
 
     render() {
-        const {description, title, image} = this.state.info;
+        const {music, info} = this.state;
+        if (isEmptyObject(info)) {
+            return <div style={styles.content}/>
+        }
+        const {description, title, image, audio_link} = info;
+
         return (
-            <div style={styles.content}>
+            <div style={styles.content} id="content">
+                {audio_link &&
                 <div style={{
-                    marginLeft: 17,
-                    marginRight: 17,
-                    marginTop: 5,
-                    backgroundColor: '#F3F3F3',
+                    width: 40,
+                    height: 40,
                     display: 'flex',
-                    flexDirection: 'row',
-                    alignItems: 'center'
-                }}>
-                    <div style={{
-                        backgroundColor: 'transparent',
-                        // display: 'flex',
-                        // alignItems: 'center',
-                        // justifyContent: 'center',
-                        width:60,
-                        height:60
-                    }}
-                         className='music_stop'
-                         onClick={() => {
-                             this.triggerBgMusic()
-                         }}>
-                        <div style={{position:'relative'}}>
-                            <img
-                                src="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/appmsg/qqmusic/icon_qqmusic_default.2x26f1f1.png"
-                                alt="" className="pic_qqmusic_default"/>
-                            <img src={image}
-                                 data-autourl="http://fs.open.kugou.com/fcdae995f3dc8e0ba071a55c5514fdec/5b6004b9/G050/M05/13/07/0oYBAFb07cmAe7xdADEVEatVgrM250.mp3"
-                                 data-musicid="20899231" className="qqmusic_thumb" alt=""/>
-                        </div>
-                        <audio id="music_play" src='http://go.163.com/2018/0209/mengniu/audio/bgm.mp3'>
-                        </audio>
-                    </div>
-                </div>
+                    flexDirection:'row',
+                    alignItems: 'center',
+                    justifyContent: 'flex-end',position: 'fixed', right: 17, top: 30}}
+                     onClick={() => {
+                         this.triggerBgMusic()
+                     }}>
+                    <img src={music ? Images.bg_music : Images.bg_music_close}
+                         style={{width: 26, height: 26}}
+                    />
+                    <audio id="musicPlay" ref={ref => {
+                        this.musicPlay = ref
+                    }} className={'music_play'} src={audio_link}>
+                    </audio>
+
+                </div>}
 
                 {strNotNull(description) ? <MarkDown description={description}/> : null}
 
