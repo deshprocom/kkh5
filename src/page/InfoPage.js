@@ -47,8 +47,10 @@ export default class InfoPage extends Component {
             weiXinShare(url, message);
 
             setTimeout(() => {
-                audio = this.musicPlay;
-                this._audio()
+                if(strNotNull(data.info.audio_link)){
+                    audio = this.musicPlay;
+                    this._audio()
+                }
             }, 1000)
 
 
@@ -126,38 +128,42 @@ export default class InfoPage extends Component {
         if (isEmptyObject(info)) {
             return <div style={styles.content}/>
         }
-        const {description, title, image, audio_link} = info;
+        const {description, title, image, audio_link, exist_coupon} = info;
 
         return (
             <div style={styles.content} id="content">
-                {audio_link &&
-                <div style={{
-                    width: 40,
-                    height: 40,
-                    display: 'flex',
-                    flexDirection:'row',
-                    alignItems: 'center',
-                    justifyContent: 'flex-end',position: 'fixed', right: 17, top: 30}}
-                     onClick={() => {
-                         this.triggerBgMusic()
-                     }}>
-                    <img src={music ? Images.bg_music : Images.bg_music_close}
-                         style={{width: 26, height: 26}}
-                    />
-                    <audio id="musicPlay" ref={ref => {
-                        this.musicPlay = ref
-                    }} className={'music_play'} src={audio_link}>
-                    </audio>
+                {!strNotNull(audio_link)? null:
+                    <div style={{
+                        width: 40,
+                        height: 40,
+                        display: 'flex',
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'flex-end', position: 'fixed', right: 17, top: 30
+                    }}
+                         onClick={() => {
+                             this.setState({
+                                 music:!this.state.music
+                             })
+                             this.triggerBgMusic()
+                         }}>
+                        <img src={this.state.music ? Images.bg_music : Images.bg_music_close}
+                             style={{width: 26, height: 26}}
+                        />
+                        <audio id="musicPlay" ref={ref => {
+                            this.musicPlay = ref
+                        }} className={'music_play'} src={audio_link}>
+                        </audio>
 
-                </div>}
+                    </div>}
 
                 {strNotNull(description) ? <MarkDown description={description}/> : null}
 
-                <div style={{position: 'fixed', bottom: 20, right: 17}} onClick={() => {
+                {exist_coupon ? <div style={{position: 'fixed', bottom: 20, right: 17}} onClick={() => {
                     this.props.history.push("/loadApp");
                 }}>
                     <img style={{width: 54, height: 54}} src={Images.croup_receive}/>
-                </div>
+                </div> : null}
             </div>
         )
     }
