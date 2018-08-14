@@ -50,3 +50,10 @@
     margin-top: -10px !important;
     margin-bottom: -10px !important;
 }
+.mark p{
+    font-size: 14px;
+    color: rgb(136, 136, 136);
+    letter-spacing: 1.5px;
+    line-height: 1.75em;
+
+}

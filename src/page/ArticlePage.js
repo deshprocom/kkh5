@@ -22,7 +22,7 @@ export default class ArticlePage extends Component {
             this.setState({
                 article: data
             })
-            const {cover_link, body_type, image,title} = data;
+            const {cover_link, body_type, image, title} = data;
             document.title = body_type === 'short' ? '说说' : '长帖';
 
             const message = {
@@ -71,7 +71,7 @@ export default class ArticlePage extends Component {
 
                     <div style={{display: 'flex', flexDirection: 'column', marginLeft: 10}}>
                         <div style={{display: 'flex', flexDirection: 'row'}}>
-                            <span style={{fontSize: 12,color:'#444444'}}>{nick_name}</span>
+                            <span style={{fontSize: 12, color: '#444444'}}>{nick_name}</span>
                             {official ? <span style={[styles.c_tag, {
                                 backgroundColor: '#161718',
                                 color: '#FFE9AD'
@@ -85,9 +85,24 @@ export default class ArticlePage extends Component {
                         <span style={styles.c_time}>{getDateDiff(created_at)}</span>
                     </div>
                 </div>
-                <span style={styles.c_body}>
-                        {body}
-                 </span>
+
+                {strNotNull(body) ? <MarkDown description={body}/> : null}
+                {/*<span style={styles.c_body}>*/}
+                {/*{body}*/}
+                {/*</span>*/}
+                {!isEmptyObject(images) ? <div style={{
+                    marginBottom: 10,
+                    marginLeft: 17,
+                    marginRight: 17,
+                }}>
+                    {images.map((item, index) => {
+                        return
+
+                        {/*<Zmage key={index} style={{width: 100, height: 100,marginRight:8,marginBottom:8,flex:1}} src={item.url}*/}
+                                    {/*className="img-responsive" alt="Responsive image"/>*/}
+                    })}
+                </div> : null}
+
 
                 <div style={{
                     display: 'flex',
@@ -135,8 +150,8 @@ export default class ArticlePage extends Component {
                                         <span style={styles.c_time}>{getDateDiff(user.created_at)}</span>
                                     </div>
 
-                                    <div style={{flex:1}}/>
-                                    <img style={{height: 18,width: 20}} onClick={()=>{
+                                    <div style={{flex: 1}}/>
+                                    <img style={{height: 18, width: 20}} onClick={() => {
                                         this.props.history.push("/loadApp");
                                     }} src={Images.reply}/>
                                 </div>
@@ -144,11 +159,12 @@ export default class ArticlePage extends Component {
                                         {item.body}
                                 </span>
 
-                                {strNotNull(item.total_replies) && item.total_replies > 0 ? <div style={styles.replies} onClick={()=>{
-                                    this.props.history.push("/loadApp");
-                                }}>
-                                    <span style={styles.c_nick2}>查看{item.total_replies}条回复</span>
-                                </div> : null}
+                                {strNotNull(item.total_replies) && item.total_replies > 0 ?
+                                    <div style={styles.replies} onClick={() => {
+                                        this.props.history.push("/loadApp");
+                                    }}>
+                                        <span style={styles.c_nick2}>查看{item.total_replies}条回复</span>
+                                    </div> : null}
                                 <div style={{marginTop: 10, width: '100%', height: 1.5, backgroundColor: '#F3F3F3'}}/>
                             </div>
 
@@ -164,19 +180,19 @@ export default class ArticlePage extends Component {
 
 const styles = {
     c_nick2: {
-        display:'block',
+        display: 'block',
         color: '#4A90E2',
         fontSize: 12,
         marginLeft: 6
     },
-    replies:{
+    replies: {
         height: 20,
         backgroundColor: '#ECECEE',
         flexDirection: 'row',
         alignItems: 'center',
         marginLeft: 15,
         marginTop: 8,
-        marginRight:17
+        marginRight: 17
     },
     like: {
         height: 15,

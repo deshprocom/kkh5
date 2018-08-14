@@ -6,14 +6,12 @@ import '../css/MarkDown.css';
 class MarkDown extends Component {
 
 
-
-
-
     render() {
         const {description} = this.props;
+        let text = description.replace(/\n/g, "<br/>");
         return (
             <div style={{width: '100%', height: '100%', paddingTop: 10}}>
-                <div className="introduceGame" dangerouslySetInnerHTML={{__html: description}}/>
+                <div className="introduceGame" dangerouslySetInnerHTML={{__html: text}}/>
 
             </div>
 
