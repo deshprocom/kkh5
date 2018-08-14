@@ -86,12 +86,21 @@ export default class InviteLoad extends Component {
                 }
             }, err => {
                 alert(err);
+                if(err === '用户已存在'){
+                    this.props.history.push("/loadApp");
+                    window.location.reload();
+                }
+
             });
 
 
         }
     };
 
+    handle=(url)=> {
+        const w = window.open('about:blank');
+        w.location.href = url
+    };
     checkVcode = () => {
         const {phone, vcode, ext, show_select} = this.state;
         let body = {
@@ -174,7 +183,7 @@ export default class InviteLoad extends Component {
                     </div>
 
                     <div className="view view2">
-                        <input  className="input" type="text" name={this.state.phone} id='input'
+                        <input className="input" type="text" name={this.state.phone} id='input'
                                placeholder="输入手机号" onChange={(input) => {
 
                             this.setState({
@@ -247,6 +256,20 @@ export default class InviteLoad extends Component {
                     }}>
                         <span style={{color: "white", fontSize: 16}}>完成</span>
                     </div>
+                    <a className="view"
+                       style={{
+                           textDecoration: 'underline',
+                           textDecorationColor: '#e54a2e',
+                           alignSelf: 'center',
+                           color: "#e54a2e",
+                           fontSize: 12
+                       }}
+                       onClick={() => {
+                           this.props.history.push("/loadApp");
+                       }}>
+                        已经注册？立即下载
+                    </a>
+
                 </div>
             </div>
 
