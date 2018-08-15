@@ -4,6 +4,7 @@ import {strNotNull, weiXinShare, isEmptyObject, getDateDiff} from "../service/ut
 import {
     topics_details, topics_comments
 } from '../service/InfoDao';
+import '../css/info.css'
 
 export default class ArticlePage extends Component {
 
@@ -11,7 +12,9 @@ export default class ArticlePage extends Component {
         super(props)
         this.state = {
             article: {},
-            comments: []
+            comments: [],
+            max: false,
+            index: 0
         };
     }
 
@@ -46,6 +49,8 @@ export default class ArticlePage extends Component {
             })
         }, err => {
         })
+
+
     };
 
     set_avatar = (avatar) => {
@@ -65,7 +70,7 @@ export default class ArticlePage extends Component {
         const {avatar, created_at, followers_count, following_count, nick_name, signature, user_id} = user;
         const {comments} = this.state;
         return (
-            <div style={styles.content}>
+            <div style={styles.content} className='article'>
                 <div style={styles.top}>
                     <img style={styles.c_avatar} src={this.set_avatar(avatar)}/>
 
@@ -87,21 +92,23 @@ export default class ArticlePage extends Component {
                 </div>
 
                 {strNotNull(body) ? <MarkDown description={body}/> : null}
-                {/*<span style={styles.c_body}>*/}
-                {/*{body}*/}
-                {/*</span>*/}
+
                 {!isEmptyObject(images) ? <div style={{
                     marginBottom: 10,
                     marginLeft: 17,
                     marginRight: 17,
                 }}>
                     {images.map((item, index) => {
-                        return
+                        return <img onClick={() => {
+                            this.setState({
+                                max: true,
+                                index: index
+                            })
+                        }} key={index} className='min'
+                                    style={{marginRight: 8, marginBottom: 8}}
+                                    src={item.url}/>
 
-                        {/*<Zmage key={index} style={{width: 100, height: 100,marginRight:8,marginBottom:8,flex:1}} src={item.url}*/}
-                                    {/*className="img-responsive" alt="Responsive image"/>*/}
-                    })}
-                </div> : null}
+                    })} </div> : null}
 
 
                 <div style={{
@@ -170,6 +177,26 @@ export default class ArticlePage extends Component {
 
                         )
                     })}
+                </div> : null}
+
+                {this.state.max ? <div style={{
+                    backgroundColor: 'rgb(20,20,20)',
+                    position: 'fixed',
+                    zIndex:999,
+                    top: 0,
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    textAlign:'center',
+                    display:'flex'
+
+                }}
+                                       onClick={() => {
+                                           this.setState({
+                                               max: false
+                                           })
+                                       }}>
+                    <img className='max' style={{alignSelf:'center'}}  src={images[this.state.index].url}/>
                 </div> : null}
             </div>
         )

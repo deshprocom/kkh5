@@ -51,9 +51,9 @@
     margin-bottom: -10px !important;
 }
 .introduceGame p{
-    font-size: 14px;
-    color: rgb(32, 32, 32);
-    letter-spacing: 1.6px;
-    line-height: 1.75em;
+    font-size: 14px !important;
+    color: rgb(32, 32, 32) !important;
+    letter-spacing: 1px !important;
+    line-height: 1.75em !important;
 
 }

@@ -23,3 +23,19 @@
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
 }
+
+.article {
+    font-size: 15px !important;
+    color: rgb(51, 51, 51) !important;
+    letter-spacing: 1px !important;
+    line-height: 1.75em !important;
+}
+
+.min{
+    width:100px;
+    height:100px;
+}
+.max{
+    width:100%;
+    height:auto;
+}
