@@ -59,6 +59,18 @@ export default class ArticlePage extends Component {
         } else {
             return Images.home_avatar
         }
+    };
+
+    show_count = (item) => {
+        if (strNotNull(item)) {
+            if (item >= 1000 || item.length > 3) {
+                return '999+'
+            } else {
+                return item
+            }
+        } else {
+            return 0
+        }
     }
 
     render() {
@@ -118,11 +130,11 @@ export default class ArticlePage extends Component {
                     marginLeft: 17,
                     marginRight: 17
                 }}>
-                    <span style={styles.comment}>{`全部评论(${total_comments})`}</span>
+                    <span style={styles.comment}>{`全部评论(${this.show_count(total_comments)})`}</span>
                     <div style={{flex: 1}}/>
-                    <span style={styles.time}>阅读&nbsp;{`(${total_views})`}</span>
+                    <span style={styles.time}>阅读&nbsp;{`(${this.show_count(total_views)})`}</span>
                     <img style={styles.like} src={Images.like_gray}/>
-                    <span style={styles.time}>&nbsp;{`(${total_likes})`}</span>
+                    <span style={styles.time}>&nbsp;{`(${this.show_count(total_likes)})`}</span>
                 </div>
                 <div style={{marginTop: 10, width: '100%', height: 1.5, backgroundColor: '#F3F3F3'}}/>
 
