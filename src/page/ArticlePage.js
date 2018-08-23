@@ -126,6 +126,7 @@ export default class ArticlePage extends Component {
                 <div style={{
                     display: 'flex',
                     flexDirection: 'row',
+                    alignItems:'center',
                     marginTop: 10,
                     marginLeft: 17,
                     marginRight: 17
@@ -218,6 +219,16 @@ export default class ArticlePage extends Component {
 }
 
 const styles = {
+    c_tag: {
+        paddingRight: 7,
+        paddingLeft: 7,
+        color: 'white',
+        fontSize: 10,
+        paddingTop: 2,
+        paddingBottom: 2,
+        marginLeft: 8,
+        borderRadius: 2
+    },
     c_nick2: {
         display: 'block',
         color: '#4A90E2',

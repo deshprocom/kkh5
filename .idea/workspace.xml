@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0a462c0f-f436-4bac-94a8-55b5f3c75700" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/css/MarkDown.css" afterPath="$PROJECT_DIR$/src/css/MarkDown.css" />
       <change beforePath="$PROJECT_DIR$/src/page/ArticlePage.js" afterPath="$PROJECT_DIR$/src/page/ArticlePage.js" />
+      <change beforePath="$PROJECT_DIR$/src/page/InfoPage.js" afterPath="$PROJECT_DIR$/src/page/InfoPage.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,14 +21,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ArticlePage.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ArticlePage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/page/ArticlePage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="113" column="52" lean-forward="true" selection-start-line="113" selection-start-column="52" selection-end-line="113" selection-end-column="52" />
+            <state relative-caret-position="429">
+              <caret line="245" column="6" lean-forward="true" selection-start-line="231" selection-start-column="4" selection-end-line="245" selection-end-column="6" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InfoPage.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/page/InfoPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="257" column="34" lean-forward="true" selection-start-line="257" selection-start-column="34" selection-end-line="257" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -37,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/src/css/MarkDown.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="334">
-              <caret line="46" column="26" lean-forward="true" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+              <caret line="46" column="26" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -139,7 +149,6 @@
         <option value="$PROJECT_DIR$/src/page/LoadApp.js" />
         <option value="$PROJECT_DIR$/src/page/mall/MallInfoPage.js" />
         <option value="$PROJECT_DIR$/src/component/Themes/Images.js" />
-        <option value="$PROJECT_DIR$/src/page/InfoPage.js" />
         <option value="$PROJECT_DIR$/src/page/InviteLoad.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
@@ -147,6 +156,7 @@
         <option value="$PROJECT_DIR$/src/css/info.css" />
         <option value="$PROJECT_DIR$/src/css/MarkDown.css" />
         <option value="$PROJECT_DIR$/src/page/ArticlePage.js" />
+        <option value="$PROJECT_DIR$/src/page/InfoPage.js" />
       </list>
     </option>
   </component>
@@ -167,8 +177,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="626" />
-    <option name="y" value="24" />
+    <option name="x" value="389" />
+    <option name="y" value="23" />
     <option name="width" value="1586" />
     <option name="height" value="971" />
   </component>
@@ -318,13 +328,6 @@
       <workItem from="1533787539262" duration="703000" />
       <workItem from="1534217495967" duration="10015000" />
       <workItem from="1534298608837" duration="3804000" />
-    </task>
-    <task id="LOCAL-00023" summary="用户注册页面">
-      <created>1531363073145</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1531363073145</updated>
     </task>
     <task id="LOCAL-00024" summary="用户注册页面">
       <created>1531365291772</created>
@@ -662,14 +665,21 @@
       <option name="project" value="LOCAL" />
       <updated>1534299050739</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="长帖分享图片">
+      <created>1535009546021</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1535009546021</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165619000" />
+    <option name="totallyTimeSpent" value="166536000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="626" y="24" width="1586" height="971" extended-state="0" />
+    <frame x="389" y="23" width="1586" height="971" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -749,7 +759,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="轮播图 未完成" />
     <MESSAGE value="Merge branch 'master' of github.com:deshprocom/kkh5&#10;&#10;# Conflicts:&#10;#&#9;package.json" />
     <MESSAGE value="下载页面" />
     <MESSAGE value="用户注册页面" />
@@ -774,7 +783,8 @@
     <MESSAGE value="H5字体调节&#10;说说换行" />
     <MESSAGE value="H5字体调节&#10;说说换行&#10;图片放大 未完成" />
     <MESSAGE value="字体" />
-    <option name="LAST_COMMIT_MESSAGE" value="字体" />
+    <MESSAGE value="长帖分享图片" />
+    <option name="LAST_COMMIT_MESSAGE" value="长帖分享图片" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1068,14 +1078,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/InfoPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2329">
-          <caret line="141" column="89" lean-forward="false" selection-start-line="141" selection-start-column="52" selection-end-line="141" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/info.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -1097,18 +1099,26 @@
     <entry file="file://$PROJECT_DIR$/src/css/MarkDown.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
-          <caret line="46" column="26" lean-forward="true" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+          <caret line="46" column="26" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/page/ArticlePage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="113" column="52" lean-forward="true" selection-start-line="113" selection-start-column="52" selection-end-line="113" selection-end-column="52" />
+        <state relative-caret-position="429">
+          <caret line="245" column="6" lean-forward="true" selection-start-line="231" selection-start-column="4" selection-end-line="245" selection-end-column="6" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/InfoPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="257" column="34" lean-forward="true" selection-start-line="257" selection-start-column="34" selection-end-line="257" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>

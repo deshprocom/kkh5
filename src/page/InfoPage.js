@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {MarkDown, Colors, Images} from '../component';
-import {strNotNull, weiXinShare, isEmptyObject} from "../service/utils";
-import {getInfos} from '../service/InfoDao';
+import {strNotNull, weiXinShare, isEmptyObject, getDateDiff} from "../service/utils";
+import {getInfos, topics_comments} from '../service/InfoDao';
 import '../css/info.css';
 
 let audio = null;
@@ -13,8 +13,8 @@ export default class InfoPage extends Component {
         this.state = {
             info: {},
             music: true,
-
-        };
+            comments: [],
+        }
         // this.musicPlay = React.createRef();
     }
 
@@ -58,8 +58,27 @@ export default class InfoPage extends Component {
 
         });
 
+        topics_comments({page: 1, page_size: 20, target_id: id, target_type: 'info'}, data => {
+            console.log("comments", data);
+            this.setState({
+                comments: data.items
+            })
+        }, err => {
+        })
 
     };
+
+    show_count = (item) => {
+        if (strNotNull(item)) {
+            if (item >= 1000 || item.length > 3) {
+                return '999+'
+            } else {
+                return item
+            }
+        } else {
+            return 0
+        }
+    }
 
     _audio = () => {
         const that = this;
@@ -121,14 +140,22 @@ export default class InfoPage extends Component {
         } else {
             this.playBgMusic(true);
         }
-    }
+    };
+
+    set_avatar = (avatar) => {
+        if (strNotNull(avatar)) {
+            return avatar;
+        } else {
+            return Images.home_avatar
+        }
+    };
 
     render() {
-        const {music, info} = this.state;
+        const {music, info,comments} = this.state;
         if (isEmptyObject(info)) {
             return <div style={styles.content}/>
         }
-        const {description, title, image, audio_link, exist_coupon} = info;
+        const {description, title, image, audio_link, exist_coupon,comments_count,total_views,total_likes} = info;
 
         return (
             <div style={styles.content} id="content">
@@ -164,16 +191,149 @@ export default class InfoPage extends Component {
                 }}>
                     <img style={{width: 54, height: 54}} src={Images.croup_receive}/>
                 </div> : null}
+
+
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    alignItems:'center',
+                    marginTop: 10,
+                    marginLeft: 17,
+                    marginRight: 17
+                }}>
+                    <span style={styles.comment}>{`全部评论(${this.show_count(comments_count)})`}</span>
+                    <div style={{flex: 1}}/>
+                    <span style={styles.time}>阅读&nbsp;{`(${this.show_count(total_views)})`}</span>
+                    <img style={styles.like} src={Images.like_gray}/>
+                    <span style={styles.time}>&nbsp;{`(${this.show_count(total_likes)})`}</span>
+                </div>
+                <div style={{marginTop: 10, width: '100%', height: 1.5, backgroundColor: '#F3F3F3'}}/>
+                {comments_count > 0 ? <div>
+                    {comments.map((item, index) => {
+                        const {user} = item;
+                        return (
+                            <div style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                marginLeft: 17,
+                                borderBottomWidth: 1,
+                                borderBottomColor: '#F3F3F3'
+                            }}
+                                 key={`commtens+${index}`}>
+                                <div style={{marginTop: 17, display: 'flex', marginRight: 17, flexDirection: 'row'}}>
+                                    <img style={styles.c_avatar} src={this.set_avatar(user.avatar)}/>
+
+                                    <div style={{display: 'flex', flexDirection: 'column', marginLeft: 8}}>
+                                        <div style={{display: 'flex', flexDirection: 'row'}}>
+                                            <span style={styles.c_nick}>{user.nick_name}</span>
+                                            {/*{official ? <span style={[styles.c_tag, {*/}
+                                                {/*backgroundColor: '#161718',*/}
+                                                {/*color: '#FFE9AD'*/}
+                                            {/*}]}>官方</span> : null}*/}
+
+                                            {/*{recommended ? <span style={[styles.c_tag, {*/}
+                                                {/*backgroundColor: '#161718',*/}
+                                                {/*color: '#FFE9AD'*/}
+                                            {/*}]}>精选</span> : null}*/}
+                                        </div>
+                                        <span style={styles.c_time}>{getDateDiff(user.created_at)}</span>
+                                    </div>
+
+                                    <div style={{flex: 1}}/>
+                                    <img style={{height: 18, width: 20}} onClick={() => {
+                                        this.props.history.push("/loadApp");
+                                    }} src={Images.reply}/>
+                                </div>
+                                <span style={styles.c_body}>
+                                        {item.body}
+                                </span>
+
+                                {strNotNull(item.total_replies) && item.total_replies > 0 ?
+                                    <div style={styles.replies} onClick={() => {
+                                        this.props.history.push("/loadApp");
+                                    }}>
+                                        <span style={styles.c_nick2}>查看{item.total_replies}条回复</span>
+                                    </div> : null}
+                                <div style={{marginTop: 10, width: '100%', height: 1.5, backgroundColor: '#F3F3F3'}}/>
+                            </div>
+
+                        )
+                    })}
+                </div> : null}
             </div>
         )
     }
 }
 
 const styles = {
+    c_nick2: {
+        display: 'block',
+        color: '#4A90E2',
+        fontSize: 12,
+        marginLeft: 6
+    },
+    replies: {
+        height: 20,
+        backgroundColor: '#ECECEE',
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginLeft: 15,
+        marginTop: 8,
+        marginRight: 17
+    },
+    c_tag: {
+        paddingRight: 7,
+        paddingLeft: 7,
+        color: 'white',
+        fontSize: 10,
+        paddingTop: 2,
+        paddingBottom: 2,
+        marginLeft: 8,
+        borderRadius: 2
+    },
     content: {
         backgroundColor: '#FFFFFF',
         paddingBottom: 100
     },
 
-
+    like: {
+        height: 15,
+        width: 15,
+        marginLeft: 6
+    },
+    time: {
+        fontSize: 12,
+        color: Colors._AAA
+    },
+    top: {
+        display: 'flex',
+        flexDirection: 'row',
+        marginLeft: 17,
+        marginRight: 17,
+        marginTop: 17
+    },
+    c_avatar: {
+        height: 38,
+        width: 38,
+        borderRadius: 19
+    },
+    c_nick: {
+        color: '#4A90E2',
+        fontSize: 12
+    },
+    c_time: {
+        color: Colors._CCC,
+        fontSize: 10
+    },
+    c_body: {
+        fontSize: 16,
+        color: Colors.txt_444,
+        marginLeft: 17,
+        display: 'block',
+        marginTop: 10
+    },
+    comment: {
+        fontSize: 14,
+        color: Colors._AAA
+    },
 };
