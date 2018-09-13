@@ -175,7 +175,7 @@ class ItemInfo extends Component {
 
                     <img
                         style={{height: 12, width: 12}}
-                        src={Images.social.reply}/>
+                        src={Images.reply}/>
                     <span style={{
                         fontSize: 12,
                         color: Colors._AAA,
