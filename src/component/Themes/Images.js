@@ -18,6 +18,45 @@ const images = {
     home_avatar:'/images/home_avatar.png',
     reply:'/images/reply.png',
     bg_music:'/images/bg_music.png',
-    bg_music_close:'/images/bg_music_close.png'
+    bg_music_close:'/images/bg_music_close.png',
+
+    macau: {
+        search: '/images/macau/search.png',
+        book: '/images/macau/book.png',
+        entertainment: '/images/macau/entertainment.png',
+        food: '/images/macau/food.png',
+        gift: '/images/macau/gift.png',
+        hotel: '/images/macau/hotel.png',
+        rate_exchange: '/images/macau/rate_exchange.png',
+        store: '/images/macau/store.png',
+        viewpoint: '/images/macau/viewpoint.png',
+        location: '/images/macau/location.png',
+        call: '/images/macau/call.png',
+        rate1: '/images/macau/rate1.png',
+        rate2: '/images/macau/rate2.png',
+        down: '/images/macau/down.png',
+        down2: '/images/macau/down2.png',
+        night: '/images/macau/night.png',
+        right: '/images/macau/right.png',
+        star: '/images/macau/star.png',
+        up: '/images/macau/up.png',
+        price1: '/images/macau/price1.png',
+        price2: '/images/macau/price2.png',
+        price1_red: '/images/macau/price1_red.png',
+        price2_red: '/images/macau/price2_red.png',
+        callPhone: '/images/macau/callPhone.png',
+        notRoom: '/images/macau/notRoom.png',
+        bg_music: '/images/macau/bg_music.png',
+        bg_music_close: '/images/macau/bg_music_close.png'
+    },
+    navigation2: {
+        weather: '/images/navigation/weather.png',
+        round_trip: '/images/navigation/round_trip.png',
+        fast_food: '/images/navigation/fast_food.png',
+        convenient: '/images/navigation/convenient.png',
+        hotline: '/images/navigation/hotline.png'
+    },
+
+    out_exit: '/images/out_exit.png'
 }
 export default images

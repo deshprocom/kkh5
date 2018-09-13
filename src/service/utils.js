@@ -3,6 +3,12 @@ import moment from 'moment';
 import _ from 'lodash';
 
 export const _lodash = _;
+export const YYYY_MM_DD = 'YYYY.MM.DD';
+export const DATA_SS = 'YYYY-MM-DD HH:mm:ss';
+export const YYYY_MM = 'YYYY-MM';
+export const YYYY年MM月 = 'YYYY年MM月';
+export const YYYYMMDD = 'YYYYMMDD';
+export const MM_DD = 'MM-DD';
 
 
 //WEB和NATIVE通行标签
@@ -206,4 +212,12 @@ export function getDateDiff(dateTimeStamp) {
     } else
         result = '刚刚';
     return result;
+}
+
+export function getCurrentMonth() {
+    return moment().format(YYYY_MM)
+}
+
+export function getCurrentDate() {
+    return moment();
 }

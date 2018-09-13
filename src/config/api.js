@@ -24,7 +24,9 @@ export default {
     app_versions: 'app_versions',
     infos: infos,//获取资讯详情
     topics_detail:topics_detail,
-    comments: 'comments',//获取说说长帖评论列表
+    comments: 'comments',//获取说说长帖评论列表,
+    banners: 'banners',//获取首页banner,
+    activityPush: 'activities/pushed',
 }
 
 
