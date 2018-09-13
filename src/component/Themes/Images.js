@@ -3,6 +3,7 @@ const images = {
     ios_app: '/images/ios_app.png',
     andorid: '/images/andorid.png',
     download_close: '/images/download_close.png',
+    empty_image: '/images/empty_ticket.png',
     cart: '/images/cart.png',
     is: '/images/is>.png',
     Android: '/images/Android.png',
@@ -55,6 +56,9 @@ const images = {
         fast_food: '/images/navigation/fast_food.png',
         convenient: '/images/navigation/convenient.png',
         hotline: '/images/navigation/hotline.png'
+    },
+    social:{
+        like_gray: '/images/social/like_gray.png'
     },
 
     out_exit: '/images/out_exit.png'

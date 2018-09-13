@@ -32,7 +32,6 @@ const RouteConfig = () => (
                 <Route path={'/invite_load'} component={InviteLoad}/>
                 <Route path={'/infos/:id'} component={InfoPage}/>
                 <Route path={'/topics/:id'} component={ArticlePage}/>
-                <Route path={'/mall_page'} component={MallPage}/>
             </Switch>
         </App>
     </Router>

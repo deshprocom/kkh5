@@ -14,7 +14,7 @@ import {getMainBanners} from '../service/MainDao';
 import {home_recommends} from '../service/MacauDao';
 import {getActivityPush} from '../service/AccountDao';
 import LoadApp from "./LoadApp";
-import {Images} from "../component";
+import {Images,Colors} from "../component";
 import {getCurrentDate} from "../service/utils";
 import StorageKey from '../config/StorageKey';
 import HomeBar from './navigation/HomeBar';
@@ -57,8 +57,8 @@ class Home extends Component {
             });
 
         }, err => {
-            console.log("banner_err23",err)
-        })
+            console.log("banner_err",err)
+        });
 
 
         home_recommends(data => {
@@ -69,7 +69,8 @@ class Home extends Component {
                     info_page: 2,
                     load_more: 'success'
                 });
-                this.infosView && this.infosView.refresh(data.items)
+                this.infosView && this.infosView.refresh(data.items);
+                this.infosView && this.infosView.setInfos(data.items)
             } else {
                 this.setState({
                     load_more: 'load_all'
@@ -131,21 +132,38 @@ class Home extends Component {
     };
 
     render() {
-        const {banners} = this.state;
+        const {banners,load_more} = this.state;
         return (
             <div className="home">
-                <div style={{width: '100%', height: 164, marginBottom: 10}}>
+                <div style={{width: '100%', height: 164}}>
                     <HomeBar banners={banners}/>
                 </div>
 
                 <Catalog />
 
-                <Information
-                    ref={ref => this.infosView = ref}
-                />
                 <div style={{width:'90%',height:1.6,backgroundColor:'#F3F3F3'}}/>
 
                 <FastBtns/>
+
+                <Information
+                    ref={ref => this.infosView = ref}
+                />
+
+                {load_more === 'loading' ? <div style={{
+                    height: 48, alignItems: 'center', justifyContent: 'center',
+                    flexDirection: 'row'
+                }}>
+                    <span>{'加载中...'}</span>
+                </div> : null}
+
+                {load_more === 'load_all' ? <div style={{
+                    height: 48, alignItems: 'center', justifyContent: 'center',
+                    flexDirection: 'row'
+                }}>
+                    <span style={{color: Colors._AAA}}>{'已经没有啦！'}</span>
+                </div> : null}
+
+
 
             </div>
         );

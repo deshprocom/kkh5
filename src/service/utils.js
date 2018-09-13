@@ -1,6 +1,7 @@
 import {getWeiXinSign} from './InfoDao';
 import moment from 'moment';
 import _ from 'lodash';
+import {Images} from '../component';
 
 export const _lodash = _;
 export const YYYY_MM_DD = 'YYYY.MM.DD';
@@ -9,7 +10,6 @@ export const YYYY_MM = 'YYYY-MM';
 export const YYYY年MM月 = 'YYYY年MM月';
 export const YYYYMMDD = 'YYYYMMDD';
 export const MM_DD = 'MM-DD';
-
 
 //WEB和NATIVE通行标签
 export class PostRoute {
@@ -220,4 +220,12 @@ export function getCurrentMonth() {
 
 export function getCurrentDate() {
     return moment();
+}
+
+export function isEmptyImg(img){
+    if(strNotNull(img)){
+        return img
+    }else{
+        return Images.empty_image
+    }
 }

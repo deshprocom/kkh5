@@ -12,6 +12,8 @@ import Images from './Themes/Images';
 import Colors from './Themes/Colors';
 import MarkDown from './MarkDown';
 
+import ImageLoad from './ImageLoad';
+
 
 
 export {
@@ -19,5 +21,6 @@ export {
     Footer,
     Images,
     Colors,
-    MarkDown
+    MarkDown,
+    ImageLoad
 }

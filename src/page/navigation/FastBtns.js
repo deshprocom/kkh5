@@ -38,7 +38,7 @@ const catalogs = [{
 
 ]
 
-export default class FastBtns extends Component {
+export default class sFastBtns extends Component {
 
     render(){
         return(
@@ -46,8 +46,6 @@ export default class FastBtns extends Component {
                 width: '100%',
                 paddingTop: 17,
                 paddingBottom: 17,
-                marginLeft: 17,
-                marginRight: 17,
                 backgroundColor: 'white',
                 display:'flex',
                 flexDirection: 'row',
