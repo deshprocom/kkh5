@@ -7,7 +7,8 @@
  *
  */
 import React, {Component} from 'react';
-import {weiXinShare, isEmptyObject, strNotNull,isEmptyImg} from '../../service/utils';
+import {Link} from 'react-router-dom'
+import {weiXinShare, isEmptyObject, strNotNull, isEmptyImg} from '../../service/utils';
 import {Images, Colors, ImageLoad} from '../../component';
 import _ from 'lodash';
 import '../../css/Home.css';
@@ -91,13 +92,13 @@ class ItemHotel extends Component {
                 //     counts: 1
                 // })
             }}
-            className= "item_hotel">
+            className="item_hotel">
 
-            <div style={{width: '70%',height: 75}}>
+            <div style={{width: '70%', height: 75}}>
                 <div className="row">
                     <span
                         style={{maxWidth: window.screen.width - 85}} className="hotel_title">{title}</span>
-                    <span className="hotel" style={{color: '#E54A2E',borderColor:'#E54A2E'}}>酒店</span>
+                    <span className="hotel" style={{color: '#E54A2E', borderColor: '#E54A2E'}}>酒店</span>
                 </div>
 
                 <span className="hotel_location">{location}</span>
@@ -127,35 +128,34 @@ class ItemInfo extends Component {
 
     render() {
         const {title, id, date, image, type, likes_count, comments_count, total_views} = this.props.info;
-        return <div
-            onClick={() => {
-                // router.toInfoPage({id})
-            }}
-            style={{
-                display: 'flex',
-                flexDirection: 'column'
-            }}>
-            <div style={{width: window.screen.width - 34}}
-                 className="row_center">
+        return (
+            <Link to={'/infos/' + id}
+                  style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      textDecoration: 'none'
+                  }}>
+                <div style={{width: window.screen.width - 34}}
+                     className="row_center">
                 <span
                     style={{maxWidth: window.screen.width - 85}} className="hotel_title">{title}</span>
-                <div style={{display: 'flex', flex: 1}}/>
+                    <div style={{display: 'flex', flex: 1}}/>
 
-                <span className="hotel">{type.name}</span>
+                    <span className="hotel">{type.name}</span>
 
-            </div>
+                </div>
 
-            <img
-                src={isEmptyImg(image)}
-                style={{height: 164, width: '100%'}}/>
+                <img
+                    src={isEmptyImg(image)}
+                    style={{height: 164, width: '100%'}}/>
 
-            <div style={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                marginTop: 10,
-                marginBottom: 10
-            }}>
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    marginTop: 10,
+                    marginBottom: 10
+                }}>
                     <span style={{fontSize: 12, color: Colors._AAA}}>阅读</span>
                     <span style={{
                         fontSize: 12,
@@ -182,9 +182,10 @@ class ItemInfo extends Component {
                         marginLeft: 4
                     }}>{this.show_count(comments_count)}</span>
 
-            </div>
+                </div>
 
-        </div>
+            </Link>
+        )
     }
 }
 
