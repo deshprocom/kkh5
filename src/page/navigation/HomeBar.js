@@ -49,11 +49,13 @@ const styles = {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        zIndex: 999
+
     },
     bannerImg: {
         maxWidth: '100%',
-        maxHeight: '100%'
+        maxHeight: '100%',
+        height:164,
+        width:'100%'
     }
 
 };

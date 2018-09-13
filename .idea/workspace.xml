@@ -2,58 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a462c0f-f436-4bac-94a8-55b5f3c75700" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/kk.ipa" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/logo_512.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/logo_57.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/bg_music.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/bg_music_close.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/book.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/call.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/callPhone.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/down.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/down2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/entertainment.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/food.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/gift.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/hotel.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/location.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/night.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/notRoom.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/price1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/price1_red.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/price2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/price2_red.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/rate1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/rate2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/rate_exchange.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/right.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/search.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/star.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/store.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/up.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/macau/viewpoint.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/navigation/convenient.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/navigation/fast_food.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/navigation/hotline.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/navigation/round_trip.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/navigation/weather.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/out_exit.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/config/StorageKey.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/page/mall/MallPage.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/page/navigation/Catalog.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/page/navigation/FastBtns.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/page/navigation/HomeBar.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/page/navigation/Information.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/service/AccountDao.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/service/MacauDao.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/service/MainDao.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/component/Themes/Images.js" afterPath="$PROJECT_DIR$/src/component/Themes/Images.js" />
-      <change beforePath="$PROJECT_DIR$/src/config/Route.js" afterPath="$PROJECT_DIR$/src/config/Route.js" />
-      <change beforePath="$PROJECT_DIR$/src/config/api.js" afterPath="$PROJECT_DIR$/src/config/api.js" />
-      <change beforePath="$PROJECT_DIR$/src/css/Home.css" afterPath="$PROJECT_DIR$/src/css/Home.css" />
-      <change beforePath="$PROJECT_DIR$/src/page/Home.js" afterPath="$PROJECT_DIR$/src/page/Home.js" />
-      <change beforePath="$PROJECT_DIR$/src/service/utils.js" afterPath="$PROJECT_DIR$/src/service/utils.js" />
+      <change beforePath="$PROJECT_DIR$/src/page/navigation/HomeBar.js" afterPath="$PROJECT_DIR$/src/page/navigation/HomeBar.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -73,18 +23,20 @@
       <file leaf-file-name="Home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/page/Home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-              <folding />
+            <state relative-caret-position="223">
+              <caret line="137" column="26" lean-forward="false" selection-start-line="137" selection-start-column="26" selection-end-line="137" selection-end-column="26" />
+              <folding>
+                <element signature="e#110#149#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FastBtns.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FastBtns.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/page/navigation/FastBtns.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="73" column="20" lean-forward="false" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
+            <state relative-caret-position="219">
+              <caret line="75" column="51" lean-forward="true" selection-start-line="75" selection-start-column="51" selection-end-line="75" selection-end-column="51" />
               <folding>
                 <element signature="e#117#156#0" expanded="true" />
               </folding>
@@ -107,8 +59,8 @@
       <file leaf-file-name="Catalog.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/page/navigation/Catalog.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="88" column="69" lean-forward="true" selection-start-line="87" selection-start-column="23" selection-end-line="88" selection-end-column="69" />
+            <state relative-caret-position="363">
+              <caret line="130" column="40" lean-forward="false" selection-start-line="130" selection-start-column="40" selection-end-line="130" selection-end-column="40" />
               <folding>
                 <element signature="e#117#156#0" expanded="true" />
               </folding>
@@ -158,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeBar.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HomeBar.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/page/navigation/HomeBar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="48" />
+            <state relative-caret-position="338">
+              <caret line="50" column="33" lean-forward="true" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
               <folding>
                 <element signature="e#117#156#0" expanded="true" />
               </folding>
@@ -272,13 +224,13 @@
         <option value="$PROJECT_DIR$/src/service/MacauDao.js" />
         <option value="$PROJECT_DIR$/src/service/MainDao.js" />
         <option value="$PROJECT_DIR$/src/css/Home.css" />
-        <option value="$PROJECT_DIR$/src/page/navigation/HomeBar.js" />
         <option value="$PROJECT_DIR$/src/page/navigation/Information.js" />
         <option value="$PROJECT_DIR$/src/config/Route.js" />
-        <option value="$PROJECT_DIR$/src/page/navigation/Catalog.js" />
         <option value="$PROJECT_DIR$/src/page/Home.js" />
         <option value="$PROJECT_DIR$/src/component/Themes/Images.js" />
         <option value="$PROJECT_DIR$/src/page/navigation/FastBtns.js" />
+        <option value="$PROJECT_DIR$/src/page/navigation/Catalog.js" />
+        <option value="$PROJECT_DIR$/src/page/navigation/HomeBar.js" />
       </list>
     </option>
   </component>
@@ -480,14 +432,7 @@
       <workItem from="1536114837536" duration="1897000" />
       <workItem from="1536198672705" duration="1645000" />
       <workItem from="1536717404161" duration="1227000" />
-      <workItem from="1536803864785" duration="6852000" />
-    </task>
-    <task id="LOCAL-00025" summary="用户注册页面">
-      <created>1531366773848</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1531366773848</updated>
+      <workItem from="1536803864785" duration="7184000" />
     </task>
     <task id="LOCAL-00026" summary="密码验证">
       <created>1531366910061</created>
@@ -825,11 +770,18 @@
       <option name="project" value="LOCAL" />
       <updated>1535010457086</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="首页页面 未完成">
+      <created>1536811581905</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1536811581905</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185865000" />
+    <option name="totallyTimeSpent" value="186197000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="431" y="24" width="1586" height="971" extended-state="0" />
@@ -900,7 +852,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="下载页面" />
     <MESSAGE value="用户注册页面" />
     <MESSAGE value="密码验证" />
     <MESSAGE value="验证码" />
@@ -925,7 +876,8 @@
     <MESSAGE value="字体" />
     <MESSAGE value="长帖分享图片" />
     <MESSAGE value="资讯评论" />
-    <option name="LAST_COMMIT_MESSAGE" value="资讯评论" />
+    <MESSAGE value="首页页面 未完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="首页页面 未完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1184,16 +1136,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/navigation/HomeBar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="48" />
-          <folding>
-            <element signature="e#117#156#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1252,28 +1194,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/navigation/Catalog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="88" column="69" lean-forward="true" selection-start-line="87" selection-start-column="23" selection-end-line="88" selection-end-column="69" />
-          <folding>
-            <element signature="e#117#156#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/Home.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/Home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -1298,8 +1222,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/page/navigation/FastBtns.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="73" column="20" lean-forward="false" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
+        <state relative-caret-position="219">
+          <caret line="75" column="51" lean-forward="true" selection-start-line="75" selection-start-column="51" selection-end-line="75" selection-end-column="51" />
+          <folding>
+            <element signature="e#117#156#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/navigation/Catalog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="130" column="40" lean-forward="false" selection-start-line="130" selection-start-column="40" selection-end-line="130" selection-end-column="40" />
+          <folding>
+            <element signature="e#117#156#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/Home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="137" column="26" lean-forward="false" selection-start-line="137" selection-start-column="26" selection-end-line="137" selection-end-column="26" />
+          <folding>
+            <element signature="e#110#149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/navigation/HomeBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="50" column="33" lean-forward="true" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
           <folding>
             <element signature="e#117#156#0" expanded="true" />
           </folding>
