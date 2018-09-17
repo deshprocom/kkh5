@@ -20,6 +20,7 @@ const images = {
     reply:'/images/reply.png',
     bg_music:'/images/bg_music.png',
     bg_music_close:'/images/bg_music_close.png',
+    sign_return: '/images/sign_retrun.png',
 
     macau: {
         search: '/images/macau/search.png',

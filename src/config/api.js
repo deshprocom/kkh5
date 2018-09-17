@@ -27,6 +27,7 @@ export default {
     comments: 'comments',//获取说说长帖评论列表,
     banners: 'banners',//获取首页banner,
     activityPush: 'activities/pushed',
+    info_types:info_types
 }
 
 
@@ -40,4 +41,9 @@ function infos(id) {
 
 function topics_detail(topic_id) {
     return `topics/${topic_id}`
+}
+
+function info_types(body) {
+    const {type} = body;
+    return `info_types/${type}/infos`
 }

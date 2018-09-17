@@ -7,6 +7,7 @@
  *
  */
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import {weiXinShare, isEmptyObject} from '../../service/utils';
 import {Images} from '../../component';
 import _ from 'lodash';
@@ -77,32 +78,37 @@ export default class Catalog extends Component {
 
         ]
     };
+    judgeLink = (item) => {
+        if (item.type === 'mall') {
+            return ''
+        } else if (item.type === 'hotel') {
+            return ''
+        } else if (item.type === 'exchange_rate') {
+            return ''
+        } else if (item.type === 'entry_exit') {
+            return ''
+            // window.location.href = 'http://www.fsm.gov.mo/psp/pspmonitor/mobile/PortasdoCerco.aspx'
+        } else {
+            return `info_types/${item.type}/infos`;
+        }
+    }
+
     catalogView = (catalogs) => {
 
         return catalogs.map((items, index) => <div
             key={'catalog' + index}>
             {items.map((item, count) => {
-                return <div
+                return <Link
                     key={item.name}
-                    onClick={() => {
-                        // if (item.type === 'mall')
-                        //     this.props.history.push("/mall_page");
-                        // else if (item.type === 'hotel') {
-                        //     router.toSelectTimePage();
-                        // } else if (item.type === 'exchange_rate') {
-                        //     router.toRatePage();
-                        // } else if (item.type === 'entry_exit') {
-                        //     router.toWebView('出入境', 'http://www.fsm.gov.mo/psp/pspmonitor/mobile/PortasdoCerco.aspx')
-                        // }  else
-                        //     router.toHotelSearch(item)
-                    }}
+                    to={this.judgeLink(item)}
                     style={{
-                        display:'flex',
-                        flexDirection:'column',
+                        display: 'flex',
+                        flexDirection: 'column',
                         alignItems: 'center',
                         paddingLeft: 15,
                         paddingRight: 15,
-                        paddingTop: count === 1 ? 15 : 0
+                        paddingTop: count === 1 ? 15 : 0,
+                        textDecoration: 'none'
                     }}>
                     <div style={{
                         height: 35, width: 35,
@@ -117,21 +123,26 @@ export default class Catalog extends Component {
                         marginTop: 5
                     }}>{item.name}</span>
 
-                </div>
+                </Link>
             })}
         </div>)
 
     };
 
-    render(){
+    render() {
         const {catalogs} = this.state;
-        return(
+        return (
             <div style={{
-                height: 160, paddingTop:10, width: '100%', backgroundColor: 'white',display:"flex",flexDirection:'column',
+                height: 160,
+                paddingTop: 10,
+                width: '100%',
+                backgroundColor: 'white',
+                display: "flex",
+                flexDirection: 'column',
                 justifyContent: 'center'
             }}>
 
-                <div style={{display:"flex",flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-around'}}>
+                <div style={{display: "flex", flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-around'}}>
                     {this.catalogView(catalogs)}
                 </div>
 

@@ -11,8 +11,16 @@ import api from '../config/api';
 import {get, post} from '../config/fetch'
 
 
+export function info_types(body, resolve, reject) {
+    get(api.info_types(body), body, ret => {
+        resolve(ret.data)
+    }, err => {
+        reject(err)
+    })
+}
+
 export function topics_comments(params, resolve, reject) {
-    get(api.comments, params,ret => {
+    get(api.comments, params, ret => {
         resolve(ret.data)
     }, err => {
         reject
