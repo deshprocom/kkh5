@@ -22,6 +22,7 @@ import InviteLoad from '../page/InviteLoad';
 import InfoPage from '../page/InfoPage';
 import ArticlePage from "../page/ArticlePage";
 import InfoCategeryPage from "../page/info/InfoCategeryPage";
+import FastFoodPage from "../page/fastBtn/FastFoodPage";
 
 const RouteConfig = () => (
     <Router>
@@ -34,6 +35,7 @@ const RouteConfig = () => (
                 <Route path={'/infos/:id'} component={InfoPage}/>
                 <Route path={'/topics/:id'} component={ArticlePage}/>
                 <Route path={'/info_types/:type/infos'} component={InfoCategeryPage}/>
+                <Route path={'/hotlines'} component={FastFoodPage}/>
             </Switch>
         </App>
     </Router>

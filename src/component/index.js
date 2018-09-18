@@ -13,6 +13,7 @@ import Colors from './Themes/Colors';
 import MarkDown from './MarkDown';
 
 import ImageLoad from './ImageLoad';
+import NavigationBar from "./NavigationBar";
 
 
 
@@ -22,5 +23,6 @@ export {
     Images,
     Colors,
     MarkDown,
-    ImageLoad
+    ImageLoad,
+    NavigationBar
 }

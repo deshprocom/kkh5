@@ -27,7 +27,8 @@ export default {
     comments: 'comments',//获取说说长帖评论列表,
     banners: 'banners',//获取首页banner,
     activityPush: 'activities/pushed',
-    info_types:info_types
+    info_types:info_types,
+    hotlines:'hotlines',//服务热线电话列表
 }
 
 

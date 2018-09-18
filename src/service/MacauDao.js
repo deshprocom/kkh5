@@ -8,3 +8,10 @@ export function home_recommends(resolve,reject, params) {
         reject
     })
 }
+
+export function getHotlines(body,resolve, reject) {
+
+    get(api.hotlines, body, ret => {
+        resolve(ret.data)
+    }, reject)
+}

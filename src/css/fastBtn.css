@@ -1,0 +1,18 @@
+.bgContainer{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    background-color: #ECECEE;
+}
+
+.txt2{
+    color: #444444;
+    font-size: 14px;
+    line-height: 20px;
+}
+.txt1{
+    color: #444444;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: bold;
+}

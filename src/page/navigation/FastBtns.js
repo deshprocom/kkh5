@@ -10,6 +10,7 @@ import React, {Component} from 'react';
 import {weiXinShare, isEmptyObject} from '../../service/utils';
 import {Images} from '../../component';
 import _ from 'lodash';
+import {Link} from 'react-router-dom';
 
 const catalogs = [{
     name: '天气',
@@ -40,6 +41,19 @@ const catalogs = [{
 
 export default class sFastBtns extends Component {
 
+    judgeLink=(item)=>{
+        if (item.type === 'weather')
+            // router.toWebView('天气', 'http://wx.weather.com.cn/mweather/101330101.shtml#1')
+            return ''
+        else if (item.type === 'fast_food') {
+            return `hotlines`
+        } else if (item.type === 'round_trip') {
+            return ''
+        } else if (item.type === 'public_service') {
+            return ''
+        }
+    }
+
     render(){
         return(
             <div style={{
@@ -54,24 +68,15 @@ export default class sFastBtns extends Component {
             }}>
 
                 {catalogs.map((item, index) => {
-                    return <div
+                    return <Link
                         key={item.name}
-                        onClick={() => {
-                            // if (item.type === 'weather')
-                            //     router.toWebView('天气', 'http://wx.weather.com.cn/mweather/101330101.shtml#1')
-                            // else if (item.type === 'fast_food') {
-                            //     global.router.toFastFoodPage('fast_food')
-                            // } else if (item.type === 'round_trip') {
-                            //     global.router.toRoundTripPage()
-                            // } else if (item.type === 'public_service') {
-                            //     global.router.toFastFoodPage('public_service')
-                            // }
-                        }}
+                        to={this.judgeLink(item)}
                         style={{
                             display:'flex',
                             flexDirection: 'row',
                             alignItems:'center',
-                            justifyContent:'center'
+                            justifyContent:'center',
+                            textDecoration:'none'
                         }}>
                         <img style={item.size}
                                src={item.icon}/>
@@ -80,7 +85,7 @@ export default class sFastBtns extends Component {
                             fontSize: 14, color: '#444444'
                         }}>{item.name}</span>
 
-                    </div>
+                    </Link>
                 })}
 
             </div>
