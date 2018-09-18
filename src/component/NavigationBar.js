@@ -16,7 +16,7 @@ export default class NavigationBar extends Component {
     render() {
         const {name} = this.props;
         return (
-            <div className="nav" style={{height: 68}}>
+            <div className="nav" style={{height: 65}}>
                 <div
                     className="btn_search"
                     onClick={() => {
@@ -24,16 +24,16 @@ export default class NavigationBar extends Component {
                     }}>
 
                     <img
-                        style={{height: 19, width: 11, marginLeft: 20, marginRight: 20}}
+                        style={{height: 19, width: 11}}
                         src={Images.sign_return}/>
-
                 </div>
                 <div style={{display: 'flex', flex: 1}}/>
 
-                <span style={{fontSize: 18, color: 'white'}}>{name}</span>
+                <span style={{fontSize: 18, color: 'white',alignSelf:'center'}}>{name}</span>
 
                 <div style={{display: 'flex', flex: 1}}/>
-                <div style={{marginRight:17}}/>
+
+                <div style={{width: 25,marginRight:17}}/>
 
             </div>
         )
