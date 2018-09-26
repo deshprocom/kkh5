@@ -43,7 +43,7 @@ export function getInfos(body, resolve, reject) {
 }
 
 export function getUpdate(resolve, reject) {
-    get(api.app_versions, ret => {
+    get(api.app_versions, {}, ret => {
         resolve(ret.data)
     }, reject)
 }

@@ -47,6 +47,7 @@ export default class LoadApp extends Component {
 
     };
     toAndroidApp = () => {
+        console.log("android_version",this.state.android_version)
         let plat = navigator.userAgent;
         if (plat.indexOf('Android') > -1 || plat.indexOf('Adr') > -1) {
             let ua = navigator.userAgent.toLowerCase();
