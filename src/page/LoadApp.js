@@ -51,7 +51,7 @@ export default class LoadApp extends Component {
         let plat = navigator.userAgent;
         if (plat.indexOf('Android') > -1 || plat.indexOf('Adr') > -1) {
             let ua = navigator.userAgent.toLowerCase();
-            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            if (ua.match(/MicroMessenger/i) === "micromessenger") {
                 this.setState({
                     showAndroid: true
                 });
