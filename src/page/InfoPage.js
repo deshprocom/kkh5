@@ -226,15 +226,6 @@ export default class InfoPage extends Component {
                                     <div style={{display: 'flex', flexDirection: 'column', marginLeft: 8}}>
                                         <div style={{display: 'flex', flexDirection: 'row'}}>
                                             <span style={styles.c_nick}>{user.nick_name}</span>
-                                            {/*{official ? <span style={[styles.c_tag, {*/}
-                                                {/*backgroundColor: '#161718',*/}
-                                                {/*color: '#FFE9AD'*/}
-                                            {/*}]}>官方</span> : null}*/}
-
-                                            {/*{recommended ? <span style={[styles.c_tag, {*/}
-                                                {/*backgroundColor: '#161718',*/}
-                                                {/*color: '#FFE9AD'*/}
-                                            {/*}]}>精选</span> : null}*/}
                                         </div>
                                         <span style={styles.c_time}>{getDateDiff(user.created_at)}</span>
                                     </div>
