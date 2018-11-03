@@ -46,12 +46,11 @@ export default class ActivityInfoPage extends Component {
     };
 
     render() {
-        const {music, info,comments} = this.state;
+        const {info} = this.state;
         if (isEmptyObject(info)) {
             return <div style={styles.content}/>
         }
-        const {description, title, image, audio_link, exist_coupon,comments_count,total_views,total_likes} = info;
-
+        const {description} = info;
         return (
             <div style={styles.content} id="content">
 

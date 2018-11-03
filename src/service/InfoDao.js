@@ -36,7 +36,7 @@ export function topics_details(topic_id, resolve, reject) {
     })
 }
 export function getActivityInfo(body, resolve, reject) {
-    get(api.activityInfo(body), ret => {
+    get(api.activityInfo(body), body,ret => {
         resolve(ret.data)
     }, reject)
 }
