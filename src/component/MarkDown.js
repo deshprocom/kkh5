@@ -17,6 +17,16 @@ class MarkDown extends Component {
 
         );
     }
+
+    no_chang = () => {
+        const {alt} = this.props;
+        if (alt && alt === 'MACAUHIKE') {
+            return false;
+        } else {
+            return true;
+        }
+
+    };
 }
 
 
