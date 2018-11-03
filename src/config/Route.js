@@ -23,6 +23,7 @@ import InfoPage from '../page/InfoPage';
 import ArticlePage from "../page/ArticlePage";
 import InfoCategeryPage from "../page/info/InfoCategeryPage";
 import FastFoodPage from "../page/fastBtn/FastFoodPage";
+import ActivityInfoPage from "../page/ActivityInfoPage";
 
 const RouteConfig = () => (
     <Router>
@@ -36,6 +37,7 @@ const RouteConfig = () => (
                 <Route path={'/topics/:id'} component={ArticlePage}/>
                 <Route path={'/info_types/:type/infos'} component={InfoCategeryPage}/>
                 <Route path={'/hotlines'} component={FastFoodPage}/>
+                <Route path={'/activities/:id'} component={ActivityInfoPage}/>
             </Switch>
         </App>
     </Router>

@@ -29,6 +29,12 @@ export default {
     activityPush: 'activities/pushed',
     info_types:info_types,
     hotlines:'hotlines',//服务热线电话列表
+    activityInfo:activityInfo(),//活动详情
+}
+
+export function activityInfo(body) {
+    const {id} = body;
+    return 'activities/' + id;
 }
 
 

@@ -35,6 +35,11 @@ export function topics_details(topic_id, resolve, reject) {
         reject(err)
     })
 }
+export function getActivityInfo(body, resolve, reject) {
+    get(api.activityInfo(body), ret => {
+        resolve(ret.data)
+    }, reject)
+}
 
 export function getInfos(body, resolve, reject) {
     get(api.infos(body.id), {}, ret => {
