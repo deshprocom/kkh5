@@ -18,6 +18,7 @@ import Home from '../page/Home'
 import MallInfoPage from '../page/mall/MallInfoPage';
 import MallPage from '../page/mall/MallPage';
 import LoadApp from '../page/LoadApp';
+import LoadApp2 from '../page/LoadApp2';
 import InviteLoad from '../page/InviteLoad';
 import InfoPage from '../page/InfoPage';
 import ArticlePage from "../page/ArticlePage";
@@ -31,7 +32,7 @@ const RouteConfig = () => (
             <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route path={'/products/:id'} component={MallInfoPage}/>
-                <Route path={'/loadApp'} component={LoadApp}/>
+                <Route path={'/loadApp'} component={LoadApp2}/>
                 <Route path={'/invite_load'} component={InviteLoad}/>
                 <Route path={'/infos/:id'} component={InfoPage}/>
                 <Route path={'/topics/:id'} component={ArticlePage}/>

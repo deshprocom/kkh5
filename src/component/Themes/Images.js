@@ -21,6 +21,9 @@ const images = {
     bg_music:'/images/bg_music.png',
     bg_music_close:'/images/bg_music_close.png',
     sign_return: '/images/sign_retrun.png',
+    load2: '/images/load2.png',
+    androidload: '/images/androidload.png',
+    iphoneload: '/images/iphoneload.png',
 
     macau: {
         search: '/images/macau/search.png',
