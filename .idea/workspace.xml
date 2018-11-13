@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a462c0f-f436-4bac-94a8-55b5f3c75700" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/androidload.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/iphoneload.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/load2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/page/LoadApp2.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/component/Themes/Images.js" afterPath="$PROJECT_DIR$/src/component/Themes/Images.js" />
-      <change beforePath="$PROJECT_DIR$/src/config/Route.js" afterPath="$PROJECT_DIR$/src/config/Route.js" />
-      <change beforePath="$PROJECT_DIR$/src/css/Download.css" afterPath="$PROJECT_DIR$/src/css/Download.css" />
+      <change beforePath="$PROJECT_DIR$/src/page/LoadApp2.js" afterPath="$PROJECT_DIR$/src/page/LoadApp2.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,8 +23,8 @@
       <file leaf-file-name="LoadApp2.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/page/LoadApp2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="55" column="37" lean-forward="true" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
+            <state relative-caret-position="147">
+              <caret line="57" column="19" lean-forward="true" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -63,7 +57,7 @@
       <file leaf-file-name="Download.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/css/Download.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
+            <state relative-caret-position="952">
               <caret line="56" column="16" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
               <folding />
             </state>
@@ -73,8 +67,8 @@
       <file leaf-file-name="Route.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/config/Route.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-104">
-              <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+            <state relative-caret-position="85">
+              <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -92,7 +86,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Colors</find>
       <find>Metrics</find>
       <find>uri</find>
       <find>const styles</find>
@@ -122,6 +115,7 @@
       <find>'img'</find>
       <find>MarkDown</find>
       <find>introduceGame</find>
+      <find>showAndroid</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -204,8 +198,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="163" />
-    <option name="y" value="23" />
+    <option name="x" value="313" />
+    <option name="y" value="31" />
     <option name="width" value="1586" />
     <option name="height" value="971" />
   </component>
@@ -393,14 +387,8 @@
       <workItem from="1541235624982" duration="1974000" />
       <workItem from="1541593685537" duration="81000" />
       <workItem from="1541728936195" duration="28000" />
-      <workItem from="1541749957889" duration="1270000" />
-    </task>
-    <task id="LOCAL-00040" summary="样式">
-      <created>1531549622051</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1531549622052</updated>
+      <workItem from="1541749957889" duration="1351000" />
+      <workItem from="1542079894432" duration="2105000" />
     </task>
     <task id="LOCAL-00041" summary="样式">
       <created>1531550000899</created>
@@ -738,14 +726,21 @@
       <option name="project" value="LOCAL" />
       <updated>1541238586578</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="下载页面改变">
+      <created>1541751403718</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1541751403718</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="275556000" />
+    <option name="totallyTimeSpent" value="277742000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="163" y="23" width="1586" height="971" extended-state="0" />
+    <frame x="313" y="31" width="1586" height="971" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -813,7 +808,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="样式" />
     <MESSAGE value="密码加密" />
     <MESSAGE value="233" />
     <MESSAGE value="详情页面和接口" />
@@ -838,7 +832,8 @@
     <MESSAGE value="商城图片" />
     <MESSAGE value="版本" />
     <MESSAGE value="新增活动详情H5" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增活动详情H5" />
+    <MESSAGE value="下载页面改变" />
+    <option name="LAST_COMMIT_MESSAGE" value="下载页面改变" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1095,7 +1090,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="36" column="44" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1103,7 +1097,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3485">
           <caret line="211" column="37" lean-forward="false" selection-start-line="211" selection-start-column="37" selection-end-line="211" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1118,9 +1111,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3094">
           <caret line="186" column="47" lean-forward="false" selection-start-line="186" selection-start-column="47" selection-end-line="186" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1128,7 +1118,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1136,7 +1125,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1144,9 +1132,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="884">
           <caret line="56" column="52" lean-forward="false" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1154,7 +1139,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1178,8 +1162,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/config/Route.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-104">
-          <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+        <state relative-caret-position="85">
+          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -1204,7 +1188,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/css/Download.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
+        <state relative-caret-position="952">
           <caret line="56" column="16" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
           <folding />
         </state>
@@ -1212,8 +1196,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/page/LoadApp2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="55" column="37" lean-forward="true" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
+        <state relative-caret-position="147">
+          <caret line="57" column="19" lean-forward="true" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
           <folding />
         </state>
       </provider>
