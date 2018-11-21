@@ -8,7 +8,7 @@
 .Download2 {
     width:100%;
     height:100%;
-    background: url('/images/load2.png') no-repeat center;
+    background: url('https://cdn-upyun.deshpro.com/kk/uploads/sets/h5_download.png') no-repeat center;
     position:absolute; width:100%; height:100%; z-index:-1;
     background-size:100% 100%;
 }
