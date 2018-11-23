@@ -88,8 +88,7 @@ export default class LoadApp2 extends Component {
                 </div> : null}
 
                 <div className="Download2" style={this.state.showAndroid ? {marginTop: 70} : null}>
-                    <div className="black">
-                    </div>
+
                     <div style={{
                         width:'100%',
                         display: 'flex',
