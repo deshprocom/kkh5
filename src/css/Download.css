@@ -2,14 +2,14 @@
     width:100%;
     height:100%;
     background: url('/images/loadApp.png') no-repeat center;
-    position:absolute; width:100%; height:100%; z-index:-1;
+    position:absolute;
     background-size:100% 100%;
 }
 .Download2 {
     width:100%;
     height:100%;
     background: url('https://cdn-upyun.deshpro.com/kk/uploads/sets/h5_download.png') no-repeat center;
-    position:absolute; width:100%; height:100%; z-index:-1;
+    position:absolute;
     background-size:100% 100%;
 }
 .black {
